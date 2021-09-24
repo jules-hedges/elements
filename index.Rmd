@@ -2,7 +2,7 @@
 title: "Elements of Cybernetics"
 author: "???"
 date: "Last updated: `r format(Sys.Date(), format='%d %B %Y')`"
-bibliography: ["source/intro.bib"]
+bibliography: ["source/introduction.bib"]
 nocite: '@*'
 link-citations: true
 reference-section-title: "Bibliography"
