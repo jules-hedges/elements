@@ -1,11 +1,11 @@
 # Actegories and enriched categories {#actegories-enriched}
 
-::: {.itenv #def-actegory title="Definition."}
+::: {.itenv #def-actegory title="Definition"}
 Let $\mathcal C$ be a monoidal category. A $\mathcal C$-actegory is a category $\mathcal D$ equipped with a bifunctor $\cdot : \mathcal C \times \mathcal D \to \mathcal D$ satisfying...
 :::
 
-::: {.itenv #prop-actegory-endofunctors title="Proposition."}
+::: {.itenv #prop-actegory-endofunctors title="Proposition"}
 Let $\mathcal C$ be a monoidal category. The following structures are equivalent:
-* $\mathcal C$-actegories $\mathcal D$
-* Categories $\mathcal D$ with a strong monoidal functor $\mathcal C \to [\mathcal D, \mathcal D]$ where $[\mathcal D, \mathcal D]$ is the category of endofunctors on $\mathcal D$, with composition as the monoidal product.
+- $\mathcal C$-actegories $\mathcal D$
+- Categories $\mathcal D$ with a strong monoidal functor $\mathcal C \to [\mathcal D, \mathcal D]$ where $[\mathcal D, \mathcal D]$ is the category of endofunctors on $\mathcal D$, with composition as the monoidal product.
 :::
