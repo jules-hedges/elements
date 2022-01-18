@@ -1,2 +1,5 @@
+def:def-actegory
+prp:prop-actegory-endofunctors
+thm:my-th
 intro
 actegories-enriched

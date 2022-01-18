@@ -93,16 +93,20 @@
             <section class="normal" id="section-">
 <div id="actegories-enriched" class="section level1">
 <h1><span class="header-section-number">2</span> Actegories and enriched categories</h1>
-<div id="def-actegory" class="itenv" title="Definition">
-<p>Let <eq env="math">\mathcal C</eq> be a monoidal category. A <eq env="math">\mathcal C</eq>-actegory is a category <eq env="math">\mathcal D</eq> equipped with a bifunctor <eq env="math">\cdot : \mathcal C \times \mathcal D \to \mathcal D</eq> satisfying…</p>
+<div class="definition">
+<p><span id="def:def-actegory" class="definition"><strong>Definition 2.1  </strong></span>Let <eq env="math">\mathcal C</eq> be a monoidal category. A <eq env="math">\mathcal C</eq>-actegory is a category <eq env="math">\mathcal D</eq> equipped with a bifunctor <eq env="math">\bullet: \mathcal C \times \mathcal D \to \mathcal D</eq> satisfying…</p>
 </div>
-<div id="prop-actegory-endofunctors" class="itenv" title="Proposition">
-<p>Let <eq env="math">\mathcal C</eq> be a monoidal category. The following structures are equivalent:</p>
+<div class="proposition">
+<p><span id="prp:prop-actegory-endofunctors" class="proposition"><strong>Proposition 2.1  </strong></span>Let <eq env="math">\mathcal C</eq> be a monoidal category. The following structures are equivalent:</p>
 <ul>
 <li><eq env="math">\mathcal C</eq>-actegories <eq env="math">\mathcal D</eq></li>
 <li>Categories <eq env="math">\mathcal D</eq> with a strong monoidal functor <eq env="math">\mathcal C \to [\mathcal D, \mathcal D]</eq> where <eq env="math">[\mathcal D, \mathcal D]</eq> is the category of endofunctors on <eq env="math">\mathcal D</eq>, with composition as the monoidal product.</li>
 </ul>
 </div>
+<div class="theorem">
+<p><span id="thm:my-th" class="theorem"><strong>Theorem 2.1  </strong></span>Hello</p>
+</div>
+<p>Theorem <a href="02-actegories-enriched.html#thm:my-th">2.1</a></p>
 
 </div>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
@@ -115,19 +119,19 @@
       var display = (this.getAttribute('env') == "displaymath");
       katex.render(this.textContent, this, {displayMode: display, fleqn: true, throwOnError: false});
     });
-    
+
     //add anchor links to headers and itenv/rmenv
     $('.section h1, .section h2, .section h3, .section h4, .section h5').each(function() {
       anchor = '#' + $(this).parent().attr('id');
       $(this).addClass("hasAnchor").prepend('<a href="' + anchor + '" class="anchor"></a>');
     });
-    $('.itenv, .rmenv').each(function() {
+    $('.itenv, .rmenv, .theorem, .lemma, .corollary, .proposition, .conjecture, .definition, .example, .exercise, .hypothesis').each(function() {
       if ($(this).attr('id') !== undefined) {
         anchor = '#' + $(this).attr('id');
         $(this).addClass("hasAnchor").prepend('<a href="' + anchor + '" class="anchor"></a>');
       };
     });
-    
+
     //customise the header
     $('div.font-settings button.size-3').map(function() {
       // this.setAttribute("class", "button size-2")

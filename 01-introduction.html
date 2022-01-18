@@ -115,19 +115,19 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       var display = (this.getAttribute('env') == "displaymath");
       katex.render(this.textContent, this, {displayMode: display, fleqn: true, throwOnError: false});
     });
-    
+
     //add anchor links to headers and itenv/rmenv
     $('.section h1, .section h2, .section h3, .section h4, .section h5').each(function() {
       anchor = '#' + $(this).parent().attr('id');
       $(this).addClass("hasAnchor").prepend('<a href="' + anchor + '" class="anchor"></a>');
     });
-    $('.itenv, .rmenv').each(function() {
+    $('.itenv, .rmenv, .theorem, .lemma, .corollary, .proposition, .conjecture, .definition, .example, .exercise, .hypothesis').each(function() {
       if ($(this).attr('id') !== undefined) {
         anchor = '#' + $(this).attr('id');
         $(this).addClass("hasAnchor").prepend('<a href="' + anchor + '" class="anchor"></a>');
       };
     });
-    
+
     //customise the header
     $('div.font-settings button.size-3').map(function() {
       // this.setAttribute("class", "button size-2")
