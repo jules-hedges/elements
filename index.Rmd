@@ -1,4 +1,4 @@
---- 
+---
 title: "Elements of Cybernetics"
 author: "???"
 date: "Last updated: `r format(Sys.Date(), format='%d %B %Y')`"
@@ -10,6 +10,12 @@ csl: citations.csl
 github-repo: "jules-hedges/elements"
 favicon: "favicon.ico"
 ---
+
+\providecommand{\action}{\bullet}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+
 
 # Foreword {-}
 
