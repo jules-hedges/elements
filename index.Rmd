@@ -79,6 +79,8 @@ newtheorem{lemma}[theorem]{Lemma}
 \providecommand{\deloop}{\twocat{B}}
 \providecommand{\Kl}{\ncat{Kl}}
 
+\providecommand{\dash}{\text{\textendash}}
+
 \providecommand{\Alg}[1]{{#1}\dash\twocat{A}\ncat{lg}}
 
 \providecommand{\lax}{\mathrm{lx}}

@@ -1,9 +1,6 @@
 # Actegories {#sec:actegories}
 
-As anticipated, we can develop the algebraic theory of
-$\cat M$-actegories systematically by instantiating the definitions of
-pseudoalgebras and their morphisms for $T=\cat M \times -$. In this
-section, we do that (implicitly) and we give examples.
+When $\cat M$ is a monoidal category, an $\cat M$-actegory is defined abstractly as a pseudoalgebra of the pseudomonad $\cat M \times -$ on the 2-category of monoidal categories. However, we will give the definition explicitly and not use the theory of pseudomonads.
 
 ::: definition
 []{#def:left-actegory label="def:left-actegory"} A **left
@@ -106,8 +103,7 @@ Maps are left unchanged, since their shortness is not affected by scaling both d
 Suppose $\cat C$ is a cocomplete category. Then $(\Set, 1, \times)$ acts on this category by coproduct, that is, there is an action $\otimes : \Set \times \cat C \to \cat C$ defined as
 $$A \otimes x := \coprod_{a \in A} x$$
 This action is called *$\Set$-tensor* and enjoys the universal property of being 'left adjoint to the hom functor':
-$$\label{eq:tensoring}
-        \cat C(A \otimes x, y) \iso \Set(A, \cat C(x, y)).$$
+$$\cat C(A \otimes x, y) \iso \Set(A, \cat C(x, y)).$$
 In general, if $\cat C$ is enriched in $\cat V$ (with underlying category $\cat C_0$) and there is an action $\otimes: \cat V \times \cat C_0 \to \cat C_0$ such that $- \otimes x \adj \cat C(x, -)$ (as non-enriched functors), we say that $\cat C$ is $\cat V$-tensored.
 :::
 
@@ -115,8 +111,8 @@ In general, if $\cat C$ is enriched in $\cat V$ (with underlying category $\cat 
 A given $\cat M$-action $\action$ on $\cat C$ can be canonically extended to an action of $[\cat M, \Set]$ on $[\cat C, \Set]$,
 In fact, the product of $\cat M$ extends in the first place to its category of copresheaves $[\cat M, \Set]$, to a monoidal structure known as *Day convolution* [@day1970closed].
 The extension of $\action$ is given, *mutatis mutandis*, in the same way:
-$$&- \action_\Day - : [\cat M, \Set] \times [\cat C, \Set] \longto [\cat C, \Set]\\
-        &(M \action_\Day X)(y) := \int^{m : \cat M, x : \cat C} \cat C(m \action x, y) \times M(m) \times X(x)$$
+$$- \action_\Day - : [\cat M, \Set] \times [\cat C, \Set] \longto [\cat C, \Set]$$
+$$(M \action_\Day X)(y) := \int^{m : \cat M, x : \cat C} \cat C(m \action x, y) \times M(m) \times X(x)$$
 We call this action *Day convolaction*.
 As for Day convolution, this action is well-defined also when $\Set$ is replaced with a Bénabou cosmos [@street1974elementary], such as any quantale.
 :::
@@ -259,15 +255,3 @@ By effecting a bicategorical Grothendieck construction [@johnson2021 Definition 
 
 Explicitly, this 2-category $\Actt$ has pairs $(\cat M : \MonCat, (\action, \cat C) : \Act{\cat M})$ as objects, while a morphism from an $\cat M$-actegory $(\action, \cat C)$ to an $\cat N$-actegory $(\actionn, \cat D)$ consists of a strong monoidal functor $R : \cat M \to \cat N$, a functor $R^\sharp : \cat C \to \cat D$ and a lineator $\ell$.
 This data can be clearly exhibited in the following commutative square:
-
-$$\begin{tikzcd}
-    {\cat M\times \cat C} & {\cat M \times \cat D} \\
-    {\cat N \times \cat C} \\
-    {\cat C} & {\cat D}
-    \arrow["{R \times \cat C}"', from=1-1, to=2-1]
-    \arrow["\action"', from=2-1, to=3-1]
-    \arrow["R^\sharp", from=3-1, to=3-2]
-    \arrow["\actionn", from=1-2, to=3-2]
-    \arrow["{\cat M \times R^\sharp}", from=1-1, to=1-2]
-    \arrow["\ell"', shorten <=17pt, shorten >=17pt, Rightarrow, from=1-2, to=3-1]
-\end{tikzcd}$$
