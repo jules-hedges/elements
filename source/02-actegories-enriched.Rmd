@@ -1,18 +1,273 @@
-# Actegories and enriched categories {#actegories-enriched}
+# Actegories {#sec:actegories}
 
-::: {.definition #def-actegory}
-Let $\mathcal C$ be a monoidal category. A $\mathcal C$-actegory is a category $\mathcal D$ equipped with a bifunctor $\action : \mathcal C \times \mathcal D \to \mathcal D$ satisfying...
+As anticipated, we can develop the algebraic theory of
+$\cat M$-actegories systematically by instantiating the definitions of
+pseudoalgebras and their morphisms for $T=\cat M \times -$. In this
+section, we do that (implicitly) and we give examples.
+
+::: definition
+[]{#def:left-actegory label="def:left-actegory"} A **left
+$\cat M$-action** (or **left $\cat M$-actegory**) is a functor
+$$-\action- : {\cat M} \times {\cat C} \to {\cat C},$$ together with two
+natural isomorphisms
+$$\epsilon_x : j \action x \isolongto x, \qquad \delta_{m,n,x} : (m \odot n) \action x \isolongto m \action (n \action x), \qquad \text{for $m,n : \cat M$, $x:\cat C$}.$$
+(respectively called *counitor* and *comultiplicator*), satisfying the
+following coherence laws:
+
+::: diagram
+[]{#diag:action-coherence-pentag label="diag:action-coherence-pentag"}
+TODO
 :::
 
-::: {.proposition #prop-actegory-endofunctors}
-Let $\mathcal C$ be a monoidal category. The following structures are equivalent:
-
-- $\mathcal C$-actegories $\mathcal D$
-- Categories $\mathcal D$ with a strong monoidal functor $\mathcal C \to [\mathcal D, \mathcal D]$ where $[\mathcal D, \mathcal D]$ is the category of endofunctors on $\mathcal D$, with composition as the monoidal product.
+::: diagram
+[]{#diag:action-coherence-ltriang label="diag:action-coherence-ltriang"}
+TODO
 :::
 
-::: {.theorem #my-th}
-Hello
+::: diagram
+[]{#diag:action-coherence-rtriang label="diag:action-coherence-rtriang"}
+TODO
+:::
 :::
 
-Theorem \@ref(thm:my-th)
+::: remark
+The terms *left* and *right* are borrowed from algebra and have their usual meaning. Left structures receive an action on the left, meaning successive actions combine as follows:
+$$m \action (n \action x) \iso (m \odot n) \action x.$$
+Right structures receive an action on the right, meaning successive actions combine as follows:
+$$(x \action n) \action m \iso x \action (n \odot m).$$
+Comparing the two equations above should make the difference clear: multiplying by $m$ and then $n$ is like multiplying by $m \odot n$ for left actions, and like $n \odot m$ for right actions. Indeed, a right $\cat M$-actegory is exactly the same as a left $\cat M^\rev$-actegory, where $\cat M^\rev$ is the monoidal category obtained by equipping the underlying category of $\cat M$ with the product $m \tilde\odot n := n \odot m$ and suitably tweaking the rest of the structure [@johnson2021 Example 1.2.9].
+
+Notice that right $\cat M$-actegories can also be conceived as pseudoalgebras for the same endofunctor $\cat M \times -$ but *equipped with a different monad structure*, namely the one where multiplication
+is precomposed with a symmetry:
+<iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsMyxbMCwwLCJcXGNhdCBNIFxcdGltZXMgXFxjYXQgTSBcXHRpbWVzIC0iXSxbMiwwLCJcXGNhdCBNIFxcdGltZXMgXFxjYXQgTSBcXHRpbWVzIC0iXSxbNCwwLCJcXGNhdCBNIFxcdGltZXMgLSJdLFswLDEsIlxcdHciLDAseyJsZXZlbCI6Mn1dLFsxLDIsIlxcb2RvdCBcXHRpbWVzIC0iLDAseyJsZXZlbCI6Mn1dXQ==&embed" width="1221" height="176" style="border-radius: 8px; border: none;"></iframe>
+
+Indeed, $\tilde \odot := \mathrm{swap} \comp \odot$, so that the pseudomonad of left $\cat M^\rev$-actegories is identical to this one, which we can rightly call the **pseudomonad of right $\cat M$-actegories**.
+
+As customary in algebra, when we do not qualify an action with an
+handedness we default to left.
+:::
+We must mention an equivalent presentation of the structure of actegory, which is handy to have in mind:
+
+::: proposition
+[]{#prop:curried-action label="prop:curried-action"}
+The data of a left $\cat M$-actegory is equivalent to that of a strong monoidal functor:
+$$\{\,\text{$\cat M \times \cat C \longto \cat C$\; left action}\,\}
+        \quad
+        \iso
+        \quad
+            \{\,\text{$\cat M \longto [\cat C, \cat C]$\; strong monoidal}\,\}$$
+The equivalence is supported by the tensor-hom adjunction in $\Cat$.
+:::
+
+::: proof
+It's a routine matter to verify that $\varepsilon$ and $\delta$ for a left action correspond to a strong monoidal structure on its currying, and that Diagrams [\[diag:action-coherence-pentag\]](#diag:action-coherence-pentag){reference-type="eqref" reference="diag:action-coherence-pentag"}-[\[diag:action-coherence-rtriang\]](#diag:action-coherence-rtriang){reference-type="eqref" reference="diag:action-coherence-rtriang"} are equivalent to the laws obeyed by such structure (see [@WorkingMathematician Section XI.2]). ◻
+:::
+
+::: remark
+This presentation is preferred in the literature on **graded (co)monads** [@GradedMonads].
+In that case, the monoidal functor $\cat M \longto [\cat C, \cat C]$ is more often considered to be just lax (for graded monads) or oplax (for graded comonads).
+These correspond to lax and oplax algebras of $\cat M \times -$ (considered as a pseudomonad) from our point of view.
+Much of the definitions we give here still work for these weaker structures, but many of the results do not hold for them.
+That's why we prefer to focus on pseudoalgebras.
+:::
+
+Despite making it easier to state the definition of actegories, the curried presentation of monoidal actions is considerably less elegant when it comes to their morphisms, 2-morphisms and other constructions.
+This can be directly motivated by observing most of the facts we care about for $\cat M$-actegories are instances of general algebraic theories, while [\[prop:curried-action\]](#prop:curried-action){reference-type="ref" reference="prop:curried-action"} is a very peculiar property of actegories.
+Therefore we'll continue to use [\[def:left-actegory\]](#def:left-actegory){reference-type="ref" reference="def:left-actegory"}.
+
+## Examples
+
+::: example
+[]{#ex:left-self-action label="ex:left-self-action"}
+Every monoidal category $\cat M$ is naturally a left $\cat M$-actegory. The tensor $- \odot = : \cat M \times \cat M \to \cat M$ is the functor part of this action, the left unitor is the counitor and the associator the comultiplicator.
+:::
+
+::: example
+[]{#ex:endomorphisms label="ex:endomorphisms"}
+Every category $\cat C$ is a $([\cat C, \cat C], 1_{\cat C}, \circ)$-actegory, under the action given by evaluation. In fact, this is the action corresponding to the identity functor of $[\cat C, \cat C]$ under the equivalence described in [\[prop:curried-action\]](#prop:curried-action){reference-type="ref" reference="prop:curried-action"}.
+This also means than any monoidal subcategory of endofunctors over $\cat C$ acts on $\cat C$.
+For instance, the action of applicative functors (a class of endofunctors definable when $\cat C$ is symmetric monoidal) is used in the literature to define a class of optics called *kaleidoscopes* [@categoricalupdate Section 3.2.2].
+:::
+
+::: example
+[]{#ex:free-actegory label="ex:free-actegory"}
+By definition, the pseudomonad $\cat M \times -$ is the 'free $\cat M$-actegory' monad, so every category can be promoted to an $\cat M$-actegory.
+The action of $\cat M$ is given by the functor $\odot \times \cat C$, that is, multiplying the left part of each object and morphism. Likewise, counitor and comultiplicator are obtained from the ones of the previous example.
+:::
+
+::: example
+[]{#ex:metric-spaces label="ex:metric-spaces"}
+The category $\ncat{Met}$ of metric spaces and short maps receives an action of $(\R^+, \geq, 1, \cdot)$, the strict monoidal category of positive real numbers. The action of a scalar $m : \R^+$ on a metric space $(X,d)$ is by scaling: the resulting metric space $(X, m \cdot d)$ is equipped with a metric scaled exactly by $m$.
+Maps are left unchanged, since their shortness is not affected by scaling both domain and codomain equally.
+:::
+
+::: example
+[]{#ex:tensor label="ex:tensor"}
+Suppose $\cat C$ is a cocomplete category. Then $(\Set, 1, \times)$ acts on this category by coproduct, that is, there is an action $\otimes : \Set \times \cat C \to \cat C$ defined as
+$$A \otimes x := \coprod_{a \in A} x$$
+This action is called *$\Set$-tensor* and enjoys the universal property of being 'left adjoint to the hom functor':
+$$\label{eq:tensoring}
+        \cat C(A \otimes x, y) \iso \Set(A, \cat C(x, y)).$$
+In general, if $\cat C$ is enriched in $\cat V$ (with underlying category $\cat C_0$) and there is an action $\otimes: \cat V \times \cat C_0 \to \cat C_0$ such that $- \otimes x \adj \cat C(x, -)$ (as non-enriched functors), we say that $\cat C$ is $\cat V$-tensored.
+:::
+
+::: example
+A given $\cat M$-action $\action$ on $\cat C$ can be canonically extended to an action of $[\cat M, \Set]$ on $[\cat C, \Set]$,
+In fact, the product of $\cat M$ extends in the first place to its category of copresheaves $[\cat M, \Set]$, to a monoidal structure known as *Day convolution* [@day1970closed].
+The extension of $\action$ is given, *mutatis mutandis*, in the same way:
+$$&- \action_\Day - : [\cat M, \Set] \times [\cat C, \Set] \longto [\cat C, \Set]\\
+        &(M \action_\Day X)(y) := \int^{m : \cat M, x : \cat C} \cat C(m \action x, y) \times M(m) \times X(x)$$
+We call this action *Day convolaction*.
+As for Day convolution, this action is well-defined also when $\Set$ is replaced with a Bénabou cosmos [@street1974elementary], such as any quantale.
+:::
+
+## Morphisms
+
+To get morphisms of $\cat M$-actegories, it is sufficient to instantiate [\[def:morphism-of-pseudoalgebras\]](#def:morphism-of-pseudoalgebras){reference-type="ref" reference="def:morphism-of-pseudoalgebras"} for the pseudomonad $\cat M \times -$:
+
+::: definition
+[]{#def:linear-functor label="def:linear-functor"}
+Let $(\action, \cat C)$ and $(\actionn, \cat D)$ be left $\cat M$-actegories.
+A **lax $\cat M$-linear functor** between them is a functor $F:\cat C \to \cat D$ equipped with a natural morphism
+$$\ell_{m,x} : m \actionn F(x) \longto F(m \action x)$$
+
+called **lineator** satisfying the following coherence laws:
+
+::: diagram
+[]{#diag:linear-coherence-pentag label="diag:linear-coherence-pentag"}
+&\[-10ex\]
+F(m (n x))
+&\[-10ex\]&\[-10ex\]
+F((m n) x)
+&\[-10ex\]\
+m F(n x)
+&&&&
+(m n) F(x)\
+&& m (n F(x))
+:::
+
+::: diagram
+[]{#diag:linear-coherence-triang label="diag:linear-coherence-triang"}
+j F(x)
+&&
+F(j x)\
+&
+F(x)
+:::
+
+When $\ell$ is invertible, we call $(F, \ell)$ simply a **$\cat M$-linear functor**, or **strong $\cat M$-linear functor** if we want to emphasize that.
+:::
+
+::: remark
+Notice Diagram [\[diag:linear-coherence-triang\]](#diag:linear-coherence-triang){reference-type="eqref" reference="diag:linear-coherence-triang"} *de facto* defines $\ell$ on $j$ as $\varepsilon_\actionn \comp F(\varepsilon_\action)^{-1}$.
+:::
+
+::: definition
+[]{#def:linear-trans label="def:linear-trans"}
+A **linear transformation** $\varphi : (\ell, F) \twoto (\nu, G)$ between two lax linear functors $F,G:(\action, \cat C) \to (\actionn, \cat D)$ is a natural transformation between the carrier functors of $F$ and $G$ such that
+
+::: diagram
+[]{#diag:lin-transf-coherence label="diag:lin-transf-coherence"}
+m F(x) & m G(x)\
+F(m x) & G(m x)
+:::
+
+commutes for every $m : \cat M$, $x: \cat C$.
+:::
+
+For a fixed monoidal category $\cat M$, $\cat M$-actegories, linear functors and linear transformations between them gather in a 2-category we denote by $\Act{\cat M}$.
+
+## Strictification
+
+General actegories are thus *pseudo*algebras for $\cat M \times -$.
+We call *strict* algebras of $\cat M \times -$ **strict actions** or **strict actegories**.
+It will be a relief to the reader to learn every actegory can be strictified.
+This result is the actegorical analogue of MacLane's coherence theorem for monoidal categories [@johnson2021 ?] we already mentioned in the previous section.
+Indeed, the proof is very similar: higher stucture morphisms are simply moved from the actegory to the equivalence.
+
+::: lemma
+[]{#lemma:strictification label="lemma:strictification"}
+Let $\cat{M}$ be strict monoidal, and suppose $(\action, \cat{C})$ is a left $\cat M$-actegory.
+Then there exists an equivalence $S: \cat{C}^\strict \to \cat{C}$ and a strict action $\action^\strict$ of $\cat{M}$ on $\cat{C}^\strict$ such that $S$ can be upgraded to an equivalence of $\cat{M}$-actegories.
+:::
+
+::: remark
+As a consequence of this theorem, we may in general assume that an actegory is strict, similar to the way we routinely assume that symmetric monoidal categories are strict.
+Although, of course, one has to be careful about which types of statement can actually be transported along actegory equivalences, especially if we are considering actions of multiple different monoidal categories.
+A more precise statement is that *any diagram which commutes under the assumption of strictness, automatically commutes*.
+:::
+
+::: corollary
+[]{#cor:strictification-equiv label="cor:strictification-equiv"}
+There is an equivalence of 2-categories:
+$$\Act{\cat M}^\lax \equi \Alg{(\cat M^\strict \times -)}_\strict^\lax.$$
+where on the left we have the 2-category of $\cat M$-actegories, lax linear functors and linear transformations and on the right we have the 2-category of strict $\cat M$-actegories, lax linear functors and linear transformations.
+:::
+
+::: proof
+$$\Act{\cat M}^\lax = \Alg{(\cat M \times -)}_\pseudo^\lax \overset{\text{MacLane}}\equi \Alg{(\cat M^\strict \times -)}_\pseudo^\lax \overset{\text{\cref{lemma:strictification}}}\equi \Alg{(\cat M^\strict \times -)}_\strict^\lax.$$ ◻
+:::
+
+::: remark
+Note that [\[lemma:strictification\]](#lemma:strictification){reference-type="ref" reference="lemma:strictification"} allows us to strictify *objects* but not *morphisms*: indeed, in the above equivalence, we still have non-strict morphisms on the right!
+:::
+
+::: remark
+[\[cor:strictification-equiv\]](#cor:strictification-equiv){reference-type="ref" reference="cor:strictification-equiv"} still holds if we replace 'lax linear' morphisms with 'strong linear' morphisms (i.e. $\lax$ with $\pseudo$ on both sides of the equivalence).
+:::
+
+::: proposition
+[]{#prop:free-forgetful-actegory label="prop:free-forgetful-actegory"}
+There is a 2-adjunction
+
+::: diagram
+todo
+:::
+
+where $U$ forgets the actegorical structure and $\cat M[-]$ is the free $\cat M$-actegory construction ([\[ex:free-actegory\]](#ex:free-actegory){reference-type="ref" reference="ex:free-actegory"}).
+:::
+
+::: proof
+Recall our notation is such that $\Act{\cat M} = \Act{\cat M}_\pseudo^\pseudo$.
+By [\[cor:strictification-equiv\]](#cor:strictification-equiv){reference-type="ref" reference="cor:strictification-equiv"}, we know this is equivalent to strict $\cat M^\strict$-actegories.
+By general results about $\Cat$-enriched monad theory (as claimed in [@blackwell1989two 4]), the latter is involved in an Eilenberg--More adjunction with $\Cat$.
+Pre-composing this adjunction with the strictification equivalence we get the desired 2-adjunction. ◻
+:::
+
+::: resproposition
+actegoriesindexed
+[]{#prop:actegories-indexed-over-moncat label="prop:actegories-indexed-over-moncat"}
+The assignment $\cat M \mapsto \Act{\cat M}$ extends to an indexed 2-category
+$$\Actt : \MonCat^\op \to 2\Cat;$$
+that is, each strong monoidal functor $R:\cat M \to \cat N$ induces a 2-functor $R^* : \Act{\cat N} \to \Act{\cat M}$ given on objects by 'change of scalars':
+$$R^*(\action, \cat C) := (R \times \cat C \comp - \action =,\ \cat C).$$
+On morphisms, $R^*$ maps an $\cat N$-linear functor $(F, l) : (\action, \cat C) \to
+    (\actionn, \cat D)$ to a $\cat M$-linear functor $(F, \ell')$, where $\ell'_{m,
+    c} : R(m) \actionn F(c) \isolongto F(R(m) \action c)$ is given by whiskering
+$\ell$ along $R \times \cat C$.
+
+On 2-cells, a linear transformation $\varphi : (F, l) \Rightarrow (G, \nu)$
+between two $\cat N$-linear functors is just a natural transformation $\varphi$ between
+the underlying carrier functors $F$ and $G$ --- it is mapped to $\varphi$ itself.
+:::
+
+::: proof
+The proof is deferred to [\[appendix:proofs\]](#appendix:proofs){reference-type="ref" reference="appendix:proofs"}. ◻
+:::
+
+By effecting a bicategorical Grothendieck construction [@johnson2021 Definition 10.7.2], we obtain a 2-category of actegories over an arbitrary base that we denote again by $\Actt$, 2-fibered over $\MonCat$.
+
+Explicitly, this 2-category $\Actt$ has pairs $(\cat M : \MonCat, (\action, \cat C) : \Act{\cat M})$ as objects, while a morphism from an $\cat M$-actegory $(\action, \cat C)$ to an $\cat N$-actegory $(\actionn, \cat D)$ consists of a strong monoidal functor $R : \cat M \to \cat N$, a functor $R^\sharp : \cat C \to \cat D$ and a lineator $\ell$.
+This data can be clearly exhibited in the following commutative square:
+
+$$\begin{tikzcd}
+    {\cat M\times \cat C} & {\cat M \times \cat D} \\
+    {\cat N \times \cat C} \\
+    {\cat C} & {\cat D}
+    \arrow["{R \times \cat C}"', from=1-1, to=2-1]
+    \arrow["\action"', from=2-1, to=3-1]
+    \arrow["R^\sharp", from=3-1, to=3-2]
+    \arrow["\actionn", from=1-2, to=3-2]
+    \arrow["{\cat M \times R^\sharp}", from=1-1, to=1-2]
+    \arrow["\ell"', shorten <=17pt, shorten >=17pt, Rightarrow, from=1-2, to=3-1]
+\end{tikzcd}$$
