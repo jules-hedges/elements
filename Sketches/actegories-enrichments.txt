@@ -1,0 +1,29 @@
+
+C monoidal closed category
+hom (A (x) B, C) = hom (A, B -o C)
+
+Linear lens (x, x') -> (y, y')
+= x -> (y' -o x') (x) y
+
+
+The following are equivalent:
+- "closed actegories" = action with a right adjoint
+- "tensored/copowered enriched categories"
+
+M monoidal category
+C category enriched in M, hom(-, -) : C^op x C -> M
+M acts on C : . : M x C -> C
+hom_C (X . Y, Z) = hom_M (X, hom_C (Y, Z))
+(X : M, Y : C, Z : C)
+
+x, y, x', y' : C
+x -> hom_C (y', x') . y
+(morphism in C)
+
+M monoidal category
+C cateogry, M acts on C
+D category, D enriched in M
+x, y : C
+x', y' : D
+x -> hom_D (y', x') . y
+(morphism in C)

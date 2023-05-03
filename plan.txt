@@ -1,0 +1,36 @@
+
+colinks = lenses, optics, etc
+links = charts
+
+cartesian colinks = concrete lenses
+closed/linear colinks = linear lenses
+dependent colinks = dependent lenses
+monoidal colinks = coend optics
+? colinks = mixed optics
+
+Chapter 0: preliminaries
+- categories, monoidal categories, string diagrams, examples, coend calculus?
+
+Chapter 1: "Concrete colinks" = can be defined without coends or dependent types
+- cartesian colinks
+-- category structure
+-- examples:
+---- destructive update lenses
+---- "naive backprop" = reverse derivatives of smooth maps
+-- universal properties (products, coproducts)
+-- fibration structure
+-- monoidal structure
+-- "teleological" structure
+---- string diagrams
+-- lens laws
+
+Chapter 2: Actegories and enriched categories
+
+Chapter 3: closed/linear colinks
+-- category structure
+--- equivalence to cartesian colinks when cartesian closed
+-- monoidal structure, teleological structure, string diagrams
+
+Chapter 3: Para
+
+Chapter 4: "Monoidal colinks" = mixed optics
