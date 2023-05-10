@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Cartesian colinks | Elements of Cybernetics</title>
+  <meta name="description" content="2 Cartesian colinks | Elements of Cybernetics" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Cartesian colinks | Elements of Cybernetics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="jules-hedges/elements" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Cartesian colinks | Elements of Cybernetics" />
+  
+  
+  
+
+<meta name="author" content="???" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="prev" href="00-background.html"/>
+<link rel="next" href="02-actegories-enriched.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><h4>Table of contents</h4></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Foreword</a></li>
+<li class="chapter" data-level="1" data-path="00-background.html"><a href="00-background.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html"><i class="fa fa-check"></i><b>2</b> Cartesian colinks</a><ul>
+<li class="chapter" data-level="2.1" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#category-cartesian-colinks"><i class="fa fa-check"></i><b>2.1</b> The category of cartesian colinks</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html"><i class="fa fa-check"></i><b>3</b> Actegories and enriched categories</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Elements of Cybernetics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="cartesian-colinks" class="section level1">
+<h1><span class="header-section-number">2</span> Cartesian colinks</h1>
+<div id="category-cartesian-colinks" class="section level2">
+<h2><span class="header-section-number">2.1</span> The category of cartesian colinks</h2>
+<div class="definition">
+<p><span id="def:def-cartesian-colink" class="definition"><strong>Definition 2.1  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">X, X', Y, Y'</eq> be objects of <eq env="math">\mathcal C</eq>. A <strong>cartesian colink</strong> in <eq env="math">\binom{f'}{f} : \binom{X'}{X} \to \binom{Y'}{Y}</eq> in <eq env="math">{\mathcal{C}}</eq> is a pair of morphisms <eq env="math">f : X \to Y</eq> and <eq env="math">f' : X \times Y' \to X'</eq>. <eq env="math">f</eq> is called the <strong>forwards pass</strong> and <eq env="math">f'</eq> is called the <strong>backwards pass</strong>.</p>
+</div>
+<div class="example">
+<p><span id="exm:ex-projection-colink" class="example"><strong>Example 2.1  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">X, Y</eq> be objects of <eq env="math">{\mathcal{C}}</eq>. There is a cartesian colink <eq env="math">\pi_1 : \binom{X \times Y}{X \times Y} \to \binom{X}{X}</eq>, also known as a <strong>lens</strong> <eq env="math">X \to Y</eq>, given by:</p>
+<ul>
+<li>The forwards pass is the projection <eq env="math">\pi_1 : X \times Y \to X</eq></li>
+<li>The backwards pass is <eq env="math">\pi_1' : (X \times Y) \times X \to X \times Y</eq> given by <eq env="math">\pi_1' ((x, y), x') = (x', y)</eq> [TODO - write with string diagram]</li>
+</ul>
+<p>Similarly there is a cartesian colink <eq env="math">\pi_2 : \binom{X \times Y}{X \times Y} \to \binom{Y}{Y}</eq>.</p>
+</div>
+<div class="example">
+<p><span id="exm:ex-cartesian-reverse-derivative" class="example"><strong>Example 2.2  </strong></span>Let <eq env="math">f : \mathbb R^m \to \mathbb R^n</eq> be a smooth function between Euclidean spaces. There is a cartesian colink <eq env="math">D (f) : \binom{\mathbb R^m}{\mathbb R^m} \to \binom{\mathbb R^n}{\mathbb R^n}</eq> in the category <eq env="math">\mathbf{Euc}</eq> of Euclidean spaces and smooth functions, called the <strong>reverse derivative colink</strong> of <eq env="math">f</eq>, given by</p>
+<ul>
+<li>The forwards pass is <eq env="math">f : \mathbb R^m \to \mathbb R^n</eq></li>
+<li>The backrwards pass is <eq env="math">f' : \mathbb R^m \times \mathbb R^n \to \mathbb R^n</eq> given by <eq env="math">f' (x, v) = J_f (x)^\top \cdot v</eq>, where <eq env="math">J_f (x)^\top</eq> is the transpose Jacobian of <eq env="math">f</eq> evaluated at <eq env="math">x</eq>, and <eq env="math">\cdot</eq> is multiplication of that matrix by the vector <eq env="math">v</eq>.</li>
+</ul>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-closed-colink" class="proposition"><strong>Proposition 2.1  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a cartesian closed category. Then a colink <eq env="math">\binom{X'}{X} \to \binom{Y'}{Y}</eq> in <eq env="math">{\mathcal{C}}</eq> can be equivalently seen as a morphism <eq env="math">X \to Y \times (Y' \to X')</eq> in <eq env="math">{\mathcal{C}}</eq>.</p>
+</div>
+<div class="definition">
+<p><span id="def:def-cartesian-colink-composition" class="definition"><strong>Definition 2.2  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">\binom{f'}{f} : \binom{X'}{X} \to \binom{Y'}{Y}</eq> and <eq env="math">\binom{g'}{g} : \binom{Y'}{Y} \to \binom{Z'}{Z}</eq> be cartesian colinks in <eq env="math">{\mathcal{C}}</eq>. The composition of the colinks is given by <eq env="math">\binom{f'}{f} \binom{g'}{g} : \binom{X'}{X} \to \binom{Z'}{Z}</eq> where</p>
+<ul>
+<li>The forwards pass is <eq env="math">f g : X \to Z</eq></li>
+<li>The backwards pass is <eq env="math">(f g)' : X \times Z' \to X'</eq> defined in the internal language of <eq env="math">{\mathcal{C}}</eq> by <eq env="math">(f g)' (x, z) = f' (x, g' (f (x), z))</eq> [TODO - write this definition in string diagrams instead]</li>
+</ul>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-colink-composition-associative" class="proposition"><strong>Proposition 2.2  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">\binom{f'}{f} : \binom{X'}{X} \to \binom{Y'}{Y}</eq>, <eq env="math">\binom{g'}{g} : \binom{Y'}{Y} \to \binom{Z'}{Z}</eq> and <eq env="math">\binom{h'}{h} : \binom{Z'}{Z} \to \binom{W'}{W}</eq> be cartesian colinks in <eq env="math">{\mathcal{C}}</eq>. Then <eq env="math">(f g) h = f (g h)</eq>.</p>
+</div>
+<div class="definition">
+<p><span id="def:def-cartesian-colink-identity" class="definition"><strong>Definition 2.3  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">X, X'</eq> be objects of <eq env="math">{\mathcal{C}}</eq>. The <strong>identity cartesian colink</strong> <eq env="math">1_{\binom{X'}{X}} : \binom{X'}{X} \to \binom{X'}{X}</eq> is given by</p>
+<ul>
+<li>The forwards pass is the identity morphism <eq env="math">1_X : X \to X</eq></li>
+<li>The backwwards pass is the projection <eq env="math">\pi_2 : X \times X' \to X'</eq></li>
+</ul>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-colink-identity" class="proposition"><strong>Proposition 2.3  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">f : \binom{X'}{X} \to \binom{Y'}{Y}</eq> be a cartesian colink in <eq env="math">{\mathcal{C}}</eq>. Then <eq env="math">1_{\binom{X'}{X}} f = f = f 1_{\binom{Y'}{Y}}</eq>.</p>
+</div>
+<div class="definition">
+<p><span id="def:def-category-cartesian-colinks" class="definition"><strong>Definition 2.4  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then <eq env="math">\overleftarrow{\mathscr L}({\mathcal{C}})</eq> is the category whose objects are pairs of objects of <eq env="math">{\mathcal{C}}</eq>, and whose morphisms are colinks in <eq env="math">{\mathcal{C}}</eq>.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-covariant-contravariant-embedding" class="proposition"><strong>Proposition 2.4  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then there is a functor <eq env="math">\binom{-}{-} : {\mathcal{C}} \times {\mathcal{C}}^\mathrm{op}\to \overleftarrow{\mathscr L}({\mathcal{C}})</eq> given by:</p>
+<ul>
+<li>On objects: <eq env="math">(X, X') \mapsto \binom{X'}{X}</eq></li>
+<li>On morphisms: <eq env="math">(f, g) \mapsto \binom{\pi_2 g}{f}</eq></li>
+</ul>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-colink-forwards-pass-functor" class="proposition"><strong>Proposition 2.5  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then there is a functor <eq env="math">\mathbb F : \overleftarrow{\mathscr L}({\mathcal{C}}) \to {\mathcal{C}}</eq>, called the <strong>forwards pass functor</strong>, given by:</p>
+<ul>
+<li>On objects, <eq env="math">\mathbb F \binom{X'}{X} = X</eq></li>
+<li>On morphisms, <eq env="math">\mathbb F \binom{f'}{f} = f</eq></li>
+</ul>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-colink-continuation" class="proposition"><strong>Proposition 2.6  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then there is a functor <eq env="math">\mathbb K : \overleftarrow{\mathscr L}({\mathcal{C}})^\mathrm{op}\to \mathbf{Set}</eq>, called the <strong>continuation functor</strong>, given by:</p>
+<ul>
+<li>On objects, <eq env="math">\mathbb K \binom{X'}{X} = {\mathcal{C}} (X, X')</eq></li>
+<li>On morphisms <eq env="math">\binom{f'}{f} : \binom{X'}{X} \to \binom{Y'}{Y}</eq>, <eq env="math">\mathbb K \binom{f'}{f} : {\mathcal{C}} (Y, Y') \to {\mathcal{C}} (X, X')</eq> is given by <eq env="math">\mathbb K \binom{f'}{f} (k) (x) = f' (x, k (f (x)))</eq> [TODO - write with string diagram]</li>
+</ul>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-reverse-derivative-functor" class="proposition"><strong>Proposition 2.7  </strong></span>There is a functor <eq env="math">D : \mathbf{Euc} \to \overleftarrow{\mathscr L}(\mathbf{Euc})</eq> given on objects by <eq env="math">D (X) = \binom{X}{X}</eq> and on morphisms by <eq env="math">D (f)</eq> from example <a href="#ex:ex-cartesian-reverse-derivative"><strong>??</strong></a>.</p>
+</div>
+
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  var $document = $(document);
+  $document.ready(function() {
+    //render maths with KaTeX
+    $('eq').map(function() {
+      var display = (this.getAttribute('env') == "displaymath");
+      katex.render(this.textContent, this, {displayMode: display, fleqn: true, throwOnError: false});
+    });
+
+    //add anchor links to headers and itenv/rmenv
+    $('.section h1, .section h2, .section h3, .section h4, .section h5').each(function() {
+      anchor = '#' + $(this).parent().attr('id');
+      $(this).addClass("hasAnchor").prepend('<a href="' + anchor + '" class="anchor"></a>');
+    });
+    $('.itenv, .rmenv, .theorem, .lemma, .corollary, .proposition, .conjecture, .definition, .example, .exercise, .hypothesis').each(function() {
+      if ($(this).attr('id') !== undefined) {
+        anchor = '#' + $(this).attr('id');
+        $(this).addClass("hasAnchor").prepend('<a href="' + anchor + '" class="anchor"></a>');
+      };
+    });
+
+    //customise the header
+    $('div.font-settings button.size-3').map(function() {
+      // this.setAttribute("class", "button size-2")
+      // if (this.innerText == "Sepia") {
+        // this.setAttribute("style", "display: none;");
+      // }
+      if (this.innerText == "White") {
+        this.innerText = "Light";
+      }
+      if (this.innerText == "Night") {
+        this.innerText = "Dark";
+      }
+    });
+    // (remove the <a> tag from the title)
+    // $('.book .book-header h1')[0].innerHTML = $('.book .book-header h1')[0].innerText
+  });
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="00-background.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="02-actegories-enriched.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 1
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/jules-hedges/elements/blob/main/source/01-cartesian-colinks.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"info": false
+});
+});
+</script>
+
+</body>
+
+</html>
