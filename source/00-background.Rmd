@@ -6,6 +6,18 @@
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 
+<!-- Semantic highlighting -->
+
+\providecommand\define[1]{\textbf{#1}}
+
+<!-- Mathematical notation -->
+
+\providecommand\comp{}
+\providecommand\id{1}
+\providecommand\op{\mathrm{op}}
+\providecommand\colink{\overleftarrow{\mathscr L}}
+\providecommand\pair[2]{\binom{#2}{#1}}
+
 <!-- Shortcuts -->
 
 \providecommand{\from}{\leftarrow}

@@ -12,11 +12,11 @@ Chapter 0: preliminaries
 - categories, monoidal categories, string diagrams, examples, coend calculus?
 
 Chapter 1: "Concrete colinks" = can be defined without coends or dependent types
-- cartesian colinks
--- category structure
--- examples:
----- destructive update lenses
----- "naive backprop" = reverse derivatives of smooth maps
+- cartesian colinks (X)
+-- category structure (X)
+-- examples: 
+---- destructive update lenses (X)
+---- "naive backprop" = reverse derivatives of smooth maps (X)
 -- universal properties (products, coproducts)
 -- fibration structure
 -- monoidal structure

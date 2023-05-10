@@ -1,0 +1,78 @@
+# Cartesian colinks {#cartesian-colinks}
+
+## The category of cartesian colinks {#category-cartesian-colinks}
+
+::: {.definition #def-cartesian-colink}
+Let $\cal C$ be a category with finite products, and let $X, X', Y, Y'$ be objects of $\mathcal C$. A **cartesian colink** in $\pair{f}{f'} : \pair{X}{X'} \to \pair{Y}{Y'}$ in $\cal C$ is a pair of morphisms $f : X \to Y$ and $f' : X \times Y' \to X'$. $f$ is called the **forwards pass** and $f'$ is called the **backwards pass**.
+:::
+
+::: {.example #ex-projection-colink}
+Let $\cal C$ be a category with finite products, and let $X, Y$ be objects of $\cal C$. There is a cartesian colink $\pi_1 : \pair{X \times Y}{X \times Y} \to \pair{X}{X}$, also known as a **lens** $X \to Y$, given by:
+
+- The forwards pass is the projection $\pi_1 : X \times Y \to X$
+- The backwards pass is $\pi_1' : (X \times Y) \times X \to X \times Y$ given by $\pi_1' ((x, y), x') = (x', y)$ [TODO - write with string diagram]
+
+Similarly there is a cartesian colink $\pi_2 : \pair{X \times Y}{X \times Y} \to \pair{Y}{Y}$.
+:::
+
+::: {.example #ex-cartesian-reverse-derivative}
+Let $f : \mathbb R^m \to \mathbb R^n$ be a smooth function between Euclidean spaces. There is a cartesian colink $D (f) : \pair{\mathbb R^m}{\mathbb R^m} \to \pair{\mathbb R^n}{\mathbb R^n}$ in the category $\mathbf{Euc}$ of Euclidean spaces and smooth functions, called the **reverse derivative colink** of $f$, given by
+
+- The forwards pass is $f : \mathbb R^m \to \mathbb R^n$
+- The backrwards pass is $f' : \mathbb R^m \times \mathbb R^n \to \mathbb R^n$ given by $f' (x, v) = J_f (x)^\top \cdot v$, where $J_f (x)^\top$ is the transpose Jacobian of $f$ evaluated at $x$, and $\cdot$ is multiplication of that matrix by the vector $v$.
+:::
+
+::: {.proposition #prop-cartesian-closed-colink}
+Let $\cal C$ be a cartesian closed category. Then a colink $\pair{X}{X'} \to \pair{Y}{Y'}$ in $\cal C$ can be equivalently seen as a morphism $X \to Y \times (Y' \to X')$ in $\cal C$.
+:::
+
+::: {.definition #def-cartesian-colink-composition}
+Let $\cal C$ be a category with finite products, and let $\pair{f}{f'} : \pair{X}{X'} \to \pair{Y}{Y'}$ and $\pair{g}{g'} : \pair{Y}{Y'} \to \pair{Z}{Z'}$ be cartesian colinks in $\cal C$. The composition of the colinks is given by $\pair{f}{f'} \comp \pair{g}{g'} : \pair{X}{X'} \to \pair{Z}{Z'}$ where
+
+- The forwards pass is $f \comp g : X \to Z$
+- The backwards pass is $(f \comp g)' : X \times Z' \to X'$ defined in the internal language of $\cal C$ by $(f \comp g)' (x, z) = f' (x, g' (f (x), z))$ [TODO - write this definition in string diagrams instead]
+:::
+
+::: {.proposition #prop-colink-composition-associative}
+Let $\cal C$ be a category with finite products, and let $\pair{f}{f'} : \pair{X}{X'} \to \pair{Y}{Y'}$, $\pair{g}{g'} : \pair{Y}{Y'} \to \pair{Z}{Z'}$ and $\pair{h}{h'} : \pair{Z}{Z'} \to \pair{W}{W'}$ be cartesian colinks in $\cal C$. Then $(f \comp g) \comp h = f \comp (g \comp h)$.
+:::
+
+::: {.definition #def-cartesian-colink-identity}
+Let $\cal C$ be a category with finite products, and let $X, X'$ be objects of $\cal C$. The **identity cartesian colink** $\id_{\pair{X}{X'}} : \pair{X}{X'} \to \pair{X}{X'}$ is given by
+
+- The forwards pass is the identity morphism $\id_X : X \to X$
+- The backwwards pass is the projection $\pi_2 : X \times X' \to X'$
+:::
+
+::: {.proposition #prop-cartesian-colink-identity}
+Let $\cal C$ be a category with finite products, and let $f : \pair{X}{X'} \to \pair{Y}{Y'}$ be a cartesian colink in $\cal C$. Then $\id_{\pair{X}{X'}} \comp f = f = f \comp \id_{\pair{Y}{Y'}}$.
+:::
+
+::: {.definition #def-category-cartesian-colinks}
+Let $\cal C$ be a category with finite products. Then $\colink (\cal C)$ is the category whose objects are pairs of objects of $\cal C$, and whose morphisms are colinks in $\cal C$.
+:::
+
+::: {.proposition #prop-covariant-contravariant-embedding}
+Let $\cal C$ be a category with finite products. Then there is a functor $\pair{-}{-} : \cal C \times \cal C^\op \to \colink (\cal C)$ given by:
+
+- On objects: $(X, X') \mapsto \pair{X}{X'}$
+- On morphisms: $(f, g) \mapsto \pair{f}{\pi_2 \comp g}$
+:::
+
+::: {.proposition #prop-cartesian-colink-forwards-pass-functor}
+Let $\cal C$ be a category with finite products. Then there is a functor $\mathbb F : \colink (\cal C) \to \cal C$, called the **forwards pass functor**, given by:
+
+- On objects, $\mathbb F \pair{X}{X'} = X$
+- On morphisms, $\mathbb F \pair{f}{f'} = f$
+:::
+
+::: {.proposition #prop-cartesian-colink-continuation}
+Let $\cal C$ be a category with finite products. Then there is a functor $\mathbb K : \colink (\cal C)^\op \to \mathbf{Set}$, called the **continuation functor**, given by:
+
+- On objects, $\mathbb K \pair{X}{X'} = \cal C (X, X')$
+- On morphisms $\pair{f}{f'} : \pair{X}{X'} \to \pair{Y}{Y'}$, $\mathbb K \pair{f}{f'} : \cal C (Y, Y') \to \cal C (X, X')$ is given by $\mathbb K \pair{f}{f'} (k) (x) = f' (x, k (f (x)))$ [TODO - write with string diagram]
+:::
+
+::: {.proposition #prop-cartesian-reverse-derivative-functor}
+There is a functor $D : \mathbf{Euc} \to \colink (\mathbf{Euc})$ given on objects by $D (X) = \pair{X}{X}$ and on morphisms by $D (f)$ from example \@ref(ex:ex-cartesian-reverse-derivative).
+:::
