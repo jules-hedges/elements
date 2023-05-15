@@ -16,6 +16,8 @@
 \providecommand\id{1}
 \providecommand\op{\mathrm{op}}
 \providecommand\colink{\overleftarrow{\mathscr L}}
+\providecommand\forwards{\mathbb F}
+\providecommand\continuation{\mathbb K}
 \providecommand\pair[2]{\binom{#2}{#1}}
 
 <!-- Shortcuts -->

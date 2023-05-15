@@ -52,6 +52,12 @@ Let $\cal C$ be a category with finite products, and let $f : \pair{X}{X'} \to \
 Let $\cal C$ be a category with finite products. Then $\colink (\cal C)$ is the category whose objects are pairs of objects of $\cal C$, and whose morphisms are colinks in $\cal C$.
 :::
 
+::: {.proposition #prop-cartesian-reverse-derivative-functor}
+There is a functor $D : \mathbf{Euc} \to \colink (\mathbf{Euc})$ given on objects by $D (X) = \pair{X}{X}$ and on morphisms by $D (f)$ from example \@ref(ex:ex-cartesian-reverse-derivative).
+:::
+
+## Basic constructions for cartesian colinks {#basic-constructions-cartesian-colinks}
+
 ::: {.proposition #prop-covariant-contravariant-embedding}
 Let $\cal C$ be a category with finite products. Then there is a functor $\pair{-}{-} : \cal C \times \cal C^\op \to \colink (\cal C)$ given by:
 
@@ -60,19 +66,53 @@ Let $\cal C$ be a category with finite products. Then there is a functor $\pair{
 :::
 
 ::: {.proposition #prop-cartesian-colink-forwards-pass-functor}
-Let $\cal C$ be a category with finite products. Then there is a functor $\mathbb F : \colink (\cal C) \to \cal C$, called the **forwards pass functor**, given by:
+Let $\cal C$ be a category with finite products. Then there is a functor $\forwards : \colink (\cal C) \to \cal C$, called the **forwards pass functor**, given by:
 
-- On objects, $\mathbb F \pair{X}{X'} = X$
-- On morphisms, $\mathbb F \pair{f}{f'} = f$
+- On objects, $\forwards \pair{X}{X'} = X$
+- On morphisms, $\forwards \pair{f}{f'} = f$
 :::
 
 ::: {.proposition #prop-cartesian-colink-continuation}
-Let $\cal C$ be a category with finite products. Then there is a functor $\mathbb K : \colink (\cal C)^\op \to \mathbf{Set}$, called the **continuation functor**, given by:
+Let $\cal C$ be a category with finite products. Then there is a functor $\continuation : \colink (\cal C)^\op \to \mathbf{Set}$, called the **continuation functor**, given by:
 
-- On objects, $\mathbb K \pair{X}{X'} = \cal C (X, X')$
-- On morphisms $\pair{f}{f'} : \pair{X}{X'} \to \pair{Y}{Y'}$, $\mathbb K \pair{f}{f'} : \cal C (Y, Y') \to \cal C (X, X')$ is given by $\mathbb K \pair{f}{f'} (k) (x) = f' (x, k (f (x)))$ [TODO - write with string diagram]
+- On objects, $\continuation \pair{X}{X'} = \cal C (X, X')$
+- On morphisms $\pair{f}{f'} : \pair{X}{X'} \to \pair{Y}{Y'}$, $\continuation \pair{f}{f'} : \cal C (Y, Y') \to \cal C (X, X')$ is given by $\continuation \pair{f}{f'} (k) (x) = f' (x, k (f (x)))$ [TODO - write with string diagram]
 :::
 
-::: {.proposition #prop-cartesian-reverse-derivative-functor}
-There is a functor $D : \mathbf{Euc} \to \colink (\mathbf{Euc})$ given on objects by $D (X) = \pair{X}{X}$ and on morphisms by $D (f)$ from example \@ref(ex:ex-cartesian-reverse-derivative).
+::: {.proposition #prop-cartesian-closed-colink-continuation}
+Let $\cal C$ be a cartesian closed category. Then there is a functor $\continuation : \colink (\cal C)^\op \to \cal C$, called the **closed continuation functor**, given by:
+
+- On objects, $\continuation \pair{X}{X'} = [X, X']$
+- On morphisms [TODO]
+:::
+
+[TODO - talk about the ambiguous notation for $\continuation$, it could be made precise using enrichment but I don't consider it worth it]
+
+::: {.proposition #prop-cartesian-closed-colink-embedding-adjunction}
+Let $\cal C$ be a cartesian closed category. Let $\left< \forwards, \continuation \right> : \colink (\cal C) \to \cal C \times \cal C^\op$ be the functor given by $\pair{X}{X'} \mapsto (X, [X, X'])$. Then there is an adjunction $\pair{-}{-} \dashv \left< \forwards, \continuation \right>$.
+:::
+
+## Fibrational structure of cartesian colinks {#fibrational-structure-cartesian-colinks}
+
+::: {.proposition #prop-reader-comonad}
+Let $\cal C$ be a category with finite products, and $X$ an object of $\cal C$. Then the functor $X \times - : \cal C \to \cal C$ is a comonad on $\cal C$.
+:::
+
+::: {.proposition #prop-reader-comonad-kleisli}
+Let $\cal C$ be a category with finite products, and $X$ an object of $\cal C$. Then the cokleisli category of $X \times -$ is isomorphic to $\cal C [X]$, defined by freely adjoining a point $1 \to X$ to $\cal C$ and closing under finite products. [TODO cite Lambek + Scott]
+:::
+
+::: {.proposition #prop-reader-comonad-indexed}
+Let $\cal C$ be a category with finite products, and $f : X \to Y$ a morphism of $\cal C$. Then $f$ induces a functor $f^* : \cal C [Y] \to \cal C [X]$.
+:::
+
+::: {.proposition #prop-cartesian-colink-forwards-pass-fibration}
+Let $\cal C$ be a category with finite products. Then the forwards pass functor $\forwards : \colink (\cal C) \to \cal C$ is a fibration.
+:::
+
+::: {.proposition #prop-cartesian-colink-fibres}
+Let $\cal C$ be a category with finite products. Then:
+
+- For each object $X$ of $\cal C$, the fibre $\forwards^{-1} (X)$ of $\colink (\cal C)$ over $X$ is isomorphic to $\cal C [X]^\op$
+- The each morphism $f : X \to Y$ of $\cal C$, the reindexing functor $\forwards^{-1} (f) : \cal C [Y]^\op \to \cal C [X]^\op$ is given by $f^*$.
 :::
