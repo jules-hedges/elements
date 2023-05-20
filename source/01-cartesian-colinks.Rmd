@@ -1,9 +1,52 @@
-# Cartesian colinks {#cartesian-colinks}
+# Cartesian links and colinks {#cartesian-links-colinks}
+
+## The category of cartesian links {#category-cartesian-links}
+
+::: {.definition #def-cartesian-link}
+Let $\cal C$ be a category with finite products, and let $X, X', Y, Y'$ be objects of $\cal C$. A **cartesian link** $\pair{f}{f'} : \pair{X}{X'} \to \pair{Y}{Y'}$ in $\cal C$ is a pair of morphisms $f : X \to Y$ and $f : X \times X' \to Y'$.
+:::
+
+::: {.example #ex-cartesian-forward-derivative}
+Let $f : \mathbb R^m \to \mathbb R^n$ be a smooth function between Euclidean spaces. There is a cartesian link $D (f) : \pair{\mathbb R^m}{\mathbb R^m} \to \pair{\mathbb R^n}{\mathbb R^n}$ in the category $\mathbf{Euc}$ of Euclidean spaces and smooth functions, called the **forward derivative link** of $f$, given by
+
+- The [what] is $f : \mathbb R^m \to \mathbb R^n$
+- The [what] is $f' : \mathbb R^m \times \mathbb R^m \to \mathbb R^n$ given by $f' (x, v) = v \cdot J_f (x)$, where $J_f (x)$ is the Jacaobian of $f$ evaluated at $x$, and $\cdot$ is multiplication of that matrix by the vector $v$.
+:::
+
+::: {.proposition #prop-cartesian-closed-link}
+Let $\cal C$ be a cartesian closed category. Then a colink $\pair{X}{X'} \to \pair{Y}{Y'}$ can be equivalently seen as a morphism $X \to Y \times [X', Y']$ in $\cal C$.
+:::
+
+::: {.definition #def-cartesian-link-composition}
+Let $\cal C$ be a category with finite products, and let $\pair{f}{f'} : \pair{X}{X'} \to \pair{Y}{Y'}$ and $\pair{g}{g'} : \pair{Y}{Y'} \to \pair{Z}{Z'}$ be cartesian links in $\cal C$. The composition of links is given by $\pair{f}{f'} \comp \pair{g}{g'} : \pair{X}{X'} \to \pair{Z}{Z'}$ where
+
+- The [what] is $f \comp g : X \to Z$
+- The [what] is $(f \comp g)' : X \times X' \to Z'$ given by [todo diagram]
+:::
+
+::: {.proposition #prop-cartesian-link-composition-associative}
+Let $\cal C$ be a category with finite products, and let $f : \pair{X}{X'} \to \pair{Y}{Y'}$, $g : \pair{Y}{Y'} \to \pair{Z}{Z'}$ and $h : \pair{Z}{Z'} \to \pair{W}{W'}$ be cartesian links in $\cal C$. Then $(\pair{f}{f'} \comp \pair{g}{g'}) \comp \pair{h}{h'} = \pair{f}{f'} \comp (\pair{g}{g'} \comp \pair{h}{h'})$.
+:::
+
+::: {.definition #def-cartesian-link-identity}
+Let $\cal C$ be a category with finite products, and let $X, X'$ be objects of $\cal C$. The **identity cartesian link** $\id_{\pair{X}{X'}} : \pair{X}{X'} \to \pair{X}{X'}$ is given by
+
+- The [what] is the identity morphism $\id_X : X \to X$
+- The [what] is the projection $\pi_2 : X \times X' \to X'$
+:::
+
+::: {.proposition #prop-cartesian-link-identity}
+Let $\cal C$ be a category with finite products, and let $f : \pair{X}{X'} \to \pair{Y}{Y'}$ be a cartesian link in $\cal C$. Then $\id_{\pair{X}{X'}} \comp f = f = f \comp \id_{\pair{Y}{Y'}}$.
+:::
+
+::: {.definition #def-category-cartesian-links}
+Let $\cal C$ be a category with finite products. Then $\link (\cal C)$ is the category whose objects are pairs of objects of $\cal C$, and whose morphisms are cartesian links in $\cal C$.
+:::
 
 ## The category of cartesian colinks {#category-cartesian-colinks}
 
 ::: {.definition #def-cartesian-colink}
-Let $\cal C$ be a category with finite products, and let $X, X', Y, Y'$ be objects of $\mathcal C$. A **cartesian colink** in $\pair{f}{f'} : \pair{X}{X'} \to \pair{Y}{Y'}$ in $\cal C$ is a pair of morphisms $f : X \to Y$ and $f' : X \times Y' \to X'$. $f$ is called the **forwards pass** and $f'$ is called the **backwards pass**.
+Let $\cal C$ be a category with finite products, and let $X, X', Y, Y'$ be objects of $\cal C$. A **cartesian colink** $\pair{f}{f'} : \pair{X}{X'} \to \pair{Y}{Y'}$ in $\cal C$ is a pair of morphisms $f : X \to Y$ and $f' : X \times Y' \to X'$. $f$ is called the **forwards pass** and $f'$ is called the **backwards pass**.
 :::
 
 ::: {.example #ex-projection-colink}
@@ -23,7 +66,7 @@ Let $f : \mathbb R^m \to \mathbb R^n$ be a smooth function between Euclidean spa
 :::
 
 ::: {.proposition #prop-cartesian-closed-colink}
-Let $\cal C$ be a cartesian closed category. Then a colink $\pair{X}{X'} \to \pair{Y}{Y'}$ in $\cal C$ can be equivalently seen as a morphism $X \to Y \times (Y' \to X')$ in $\cal C$.
+Let $\cal C$ be a cartesian closed category. Then a colink $\pair{X}{X'} \to \pair{Y}{Y'}$ in $\cal C$ can be equivalently seen as a morphism $X \to Y \times [Y', X']$ in $\cal C$.
 :::
 
 ::: {.definition #def-cartesian-colink-composition}
@@ -33,8 +76,8 @@ Let $\cal C$ be a category with finite products, and let $\pair{f}{f'} : \pair{X
 - The backwards pass is $(f \comp g)' : X \times Z' \to X'$ defined in the internal language of $\cal C$ by $(f \comp g)' (x, z) = f' (x, g' (f (x), z))$ [TODO - write this definition in string diagrams instead]
 :::
 
-::: {.proposition #prop-colink-composition-associative}
-Let $\cal C$ be a category with finite products, and let $\pair{f}{f'} : \pair{X}{X'} \to \pair{Y}{Y'}$, $\pair{g}{g'} : \pair{Y}{Y'} \to \pair{Z}{Z'}$ and $\pair{h}{h'} : \pair{Z}{Z'} \to \pair{W}{W'}$ be cartesian colinks in $\cal C$. Then $(f \comp g) \comp h = f \comp (g \comp h)$.
+::: {.proposition #prop-cartesian-colink-composition-associative}
+Let $\cal C$ be a category with finite products, and let $\pair{f}{f'} : \pair{X}{X'} \to \pair{Y}{Y'}$, $\pair{g}{g'} : \pair{Y}{Y'} \to \pair{Z}{Z'}$ and $\pair{h}{h'} : \pair{Z}{Z'} \to \pair{W}{W'}$ be cartesian colinks in $\cal C$. Then $(\pair{f}{f'} \comp \pair{g}{g'}) \comp \pair{h}{h'} = \pair{f}{f'} \comp (\pair{g}{g'} \comp \pair{h}{h'})$.
 :::
 
 ::: {.definition #def-cartesian-colink-identity}
@@ -49,14 +92,21 @@ Let $\cal C$ be a category with finite products, and let $f : \pair{X}{X'} \to \
 :::
 
 ::: {.definition #def-category-cartesian-colinks}
-Let $\cal C$ be a category with finite products. Then $\colink (\cal C)$ is the category whose objects are pairs of objects of $\cal C$, and whose morphisms are colinks in $\cal C$.
+Let $\cal C$ be a category with finite products. Then $\colink (\cal C)$ is the category whose objects are pairs of objects of $\cal C$, and whose morphisms are cartesian colinks in $\cal C$.
 :::
 
 ::: {.proposition #prop-cartesian-reverse-derivative-functor}
 There is a functor $D : \mathbf{Euc} \to \colink (\mathbf{Euc})$ given on objects by $D (X) = \pair{X}{X}$ and on morphisms by $D (f)$ from example \@ref(ex:ex-cartesian-reverse-derivative).
 :::
 
-## Basic constructions for cartesian colinks {#basic-constructions-cartesian-colinks}
+## Basic constructions for cartesian links and colinks {#basic-constructions-cartesian-colinks}
+
+::: {.proposition #prop-covariant-covariant-embedding}
+let $\cal C$ be a category with finite products. Then there is a functor $\pair{-}{-} : \cal C \times \cal C \to \link (\cal C)$ given by:
+
+- On objects: $(X, X') \mapsto \pair{X}{X'}$
+- On morphisms: $(f, g) \mapsto \pair{f}{\pi_2 \comp g}$
+:::
 
 ::: {.proposition #prop-covariant-contravariant-embedding}
 Let $\cal C$ be a category with finite products. Then there is a functor $\pair{-}{-} : \cal C \times \cal C^\op \to \colink (\cal C)$ given by:
@@ -65,11 +115,25 @@ Let $\cal C$ be a category with finite products. Then there is a functor $\pair{
 - On morphisms: $(f, g) \mapsto \pair{f}{\pi_2 \comp g}$
 :::
 
+::: {.proposition #prop-cartesian-link-todo-functor}
+Let $\cal C$ be a category with finite products. Then there is a functor $\mathbb E : \link (\cal C) \to \cal C$ [todo name this thing], given by:
+
+- On objects, $\mathbb E \pair{X}{X'} = X$
+- On morphisms $\mathbb E \pair{f}{f'} = f$.
+:::
+
 ::: {.proposition #prop-cartesian-colink-forwards-pass-functor}
 Let $\cal C$ be a category with finite products. Then there is a functor $\forwards : \colink (\cal C) \to \cal C$, called the **forwards pass functor**, given by:
 
 - On objects, $\forwards \pair{X}{X'} = X$
 - On morphisms, $\forwards \pair{f}{f'} = f$
+:::
+
+::: {.proposition #prop-cartesian-link-functor}
+Let $\cal C$ be a category with finite products. Then there is a functor $\mathbb L : \link (\cal C) \to \cal C$, called the **link functor**, given by:
+
+- On objects, $\mathbb L \pair{X}{X'} = X \times X'$
+- On morphisms, [todo write this down]
 :::
 
 ::: {.proposition #prop-cartesian-colink-continuation}
@@ -88,11 +152,48 @@ Let $\cal C$ be a cartesian closed category. Then there is a functor $\continuat
 
 [TODO - talk about the ambiguous notation for $\continuation$, it could be made precise using enrichment but I don't consider it worth it]
 
-::: {.proposition #prop-cartesian-closed-colink-embedding-adjunction}
-Let $\cal C$ be a cartesian closed category. Let $\left< \forwards, \continuation \right> : \colink (\cal C) \to \cal C \times \cal C^\op$ be the functor given by $\pair{X}{X'} \mapsto (X, [X, X'])$. Then there is an adjunction $\pair{-}{-} \dashv \left< \forwards, \continuation \right>$.
+::: {.proposition #prop-cartesian-link-embedding-adjunction}
+Let $\cal C$ be a category with finite products. Let $\left< \mathbb E, \mathbb L \right> : \link (\cal C) \to \cal C \times \cal C$ be the functor given by $\pair{X}{X'} \mapsto (X, X \times X')$. Then there is an adjunction $\left< \mathbb E, \mathbb L \right> \dashv \pair{-}{-}$.
 :::
 
-## Fibrational structure of cartesian colinks {#fibrational-structure-cartesian-colinks}
+::: {.proposition #prop-cartesian-closed-colink-embedding-adjunction}
+Let $\cal C$ be a cartesian closed category. Let $\left< \forwards, \continuation \right> : \colink (\cal C) \to \cal C \times \cal C^\op$ be the functor given by $\pair{X}{X'} \mapsto (X, [X, X'])$. Then there is an adjunction $\left< \forwards, \continuation \right> \dashv \pair{-}{-}$.
+:::
+
+## Limits and colimits of cartesian colinks {#limits-colimits-cartesian-colinks}
+
+::: {.proposition #prop-cartesian-links-products}
+Let $\cal C$ be a category with finite (all) products. Then $\link (\cal C)$ has finite (all) products given on objects by $\pair{X}{X'} \times \pair{Y}{Y'} = \pair{X \times X'}{Y \times Y'}$, respectively $\prod_{i : I} \pair{X_i}{X'_i} = \pair{\prod_{i : I} X_i}{\prod_{i : I} X'_i}$.
+:::
+
+::: {.proposition #prop-cartesian-links-terminal-object}
+Let $\cal C$ with a category with finite products whose terminal object is $1$. Then $\pair{1}{1}$ is terminal in $\link (\cal C)$.
+:::
+
+::: {.proposition #prop-cartesian-colinks-products}
+Let $\cal C$ be a category with finite (all) products and finite (all) distributive coproducts. Then $\colink (\cal C)$ has finite (all) products given on objects by $\pair{X}{X'} \times \pair{Y}{Y'} = \pair{X \times Y}{X' + Y'}$, respectively $\prod_{i : I} \pair{X_i}{X'_i} = \pair{\prod_{i : I} X_i}{\sum_{i : I} X'_i}$.
+:::
+
+::: {.proposition #prop-cartesian-colinks-terminal-object}
+Let $\cal C$ be a category with finite products, with an initial object $0$ and a terminal object $1$. Then $\pair{1}{0}$ is terminal in $\colink (\cal C)$.
+:::
+
+::: {.proposition #prop-cartesian-colinks-coproducts}
+Let $\cal C$ be a category with finite products and finite (all) distributive coproducts. Then $\colink (\cal C)$ has finite (all) coproducts that have the form $\pair{X}{Z} + \pair{Y}{Z} = \pair{X + Y}{Z}$, respectively $\sum_{i : I} \pair{X_i}{Z} = \pair{\sum_{i : I} X_i}{Z}$.
+:::
+
+::: {.proposition #prop-cartesian-colinks-initial-object}
+Let $\cal C$ be a category with finite products and an initial object $0$. Then for any object $X$ of $\cal C$, $\pair{0}{X}$ is initial in $\colink (\cal C)$.
+:::
+
+::: {.example #prop-cartesian-colinks-other-coproducts}
+The category $\colink (\mathbf{Set})$ does not have all coproducts, but it does have some coproducts that are not of the form of proposition \ref{prop:prop-cartesian-colinks-coproducts} [todo fix ref].
+
+- [todo example of a missing coproduct]
+- An example of a coproduct present in $\colink (\mathbf{Set})$ not of the form of [todo ref] is $\pair{1}{0} + \pair{1}{1} = \pair{2}{0}$
+:::
+
+## Fibrational structure of cartesian links and colinks {#fibrational-structure-cartesian-links-colinks}
 
 ::: {.proposition #prop-reader-comonad}
 Let $\cal C$ be a category with finite products, and $X$ an object of $\cal C$. Then the functor $X \times - : \cal C \to \cal C$ is a comonad on $\cal C$.
@@ -116,3 +217,28 @@ Let $\cal C$ be a category with finite products. Then:
 - For each object $X$ of $\cal C$, the fibre $\forwards^{-1} (X)$ of $\colink (\cal C)$ over $X$ is isomorphic to $\cal C [X]^\op$
 - The each morphism $f : X \to Y$ of $\cal C$, the reindexing functor $\forwards^{-1} (f) : \cal C [Y]^\op \to \cal C [X]^\op$ is given by $f^*$.
 :::
+
+## The double category of colinks and links {#double-category-colinks-links}
+
+::: {.definition #def-colink-link-commutation}
+Let $\cal C$ be a category with finite products. We say that a square of the form [todo] where $h_1$ and $h_2$ are colinks in $\cal C$ and $v_1$ and $v_2$ are links in $\cal C$ formally commutes if:
+
+- [todo condition 1]
+- [todo condition 2]
+:::
+
+::: {.definition #def-double-category-colinks-links}
+Let $\cal C$ be a category with finite products. Then $\cal L (\cal C)$ is the double category where:
+
+- Objects are pairs of objects of $\cal C$
+- Loose 1-cells are cartesian colinks in $\cal C$
+- Tight 1-cells are cartesian links in $\cal C$
+- There is a unique 2-cell [write] when the square formally commutes.
+:::
+
+## Notes {#cartesian-links-colinks-notes}
+
+- Links first appeared to my knowledge as morphisms in the total category of Bart Jacobs' *simple fibration* [Jacobs, Categorical logic and type theory]
+- Their central role in categorical systems theory was recognised by David Jaz Myers [Myers, Categorical systems theory]
+- Colinks have a much more complicated history [todo]
+- Wiring diagrams operad?

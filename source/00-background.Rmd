@@ -15,6 +15,7 @@
 \providecommand\comp{}
 \providecommand\id{1}
 \providecommand\op{\mathrm{op}}
+\providecommand\link{\overrightarrow{\mathscr L}}
 \providecommand\colink{\overleftarrow{\mathscr L}}
 \providecommand\forwards{\mathbb F}
 \providecommand\continuation{\mathbb K}

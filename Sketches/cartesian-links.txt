@@ -1,0 +1,38 @@
+
+(-, -) : C x C -> Link(C)
+
+Does (-, -) preserve products? Is it a left adjoint?
+
+Link(C) ((X, X'), (Y, Y')) = (C x C) ((X, X'), R (Y, Y'))
+
+(X -> Y) x (X x X' -> Y') = (C x C) ((X, X'), (Y, X -> Y')) 
+no.
+==
+
+Does Link(C) has products?
+
+Link(C) ((X x Y, X' x Y'), (X, X'))
+Link(C) ((X x Y, X' x Y'), (Y, Y'))
+
+(P, Q) -> (X, X') P -> X, P x Q -> X'
+(P, Q) -> (Y, Y') P -> Y, P x Q -> Y'
+==
+(P, Q) -> (X x Y, X' x Y'), P -> X x Y, P x Q -> X' x Y'
+
+???
+
+Is (-, -) a right adjoint?
+
+(C x C) (L (X, X'), (Y, Y')) = Link(C) ((X, X'), (Y, Y'))
+                             = (X -> Y) x (X x X' -> Y')
+Yes, L (X, X') = (X, X x X')
+L : Link(C) -> C x C
+L = <E, P> where P : Link(C) -> C, P (X, X') = X x X'
+
+If f : (X, X') -> (Y, Y') link then P (f) : X x Y -> X' x Y'
+
+======
+
+(C x C) ((X, X x X'), (Y, Y')) = Link ((X, X'), (Y, Y'))
+
+(C x C^op) ((X, X -> X'), (Y, Y')) = Colink ((X, X'), (Y, Y'))
