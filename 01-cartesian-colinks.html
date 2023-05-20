@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Cartesian colinks | Elements of Cybernetics</title>
-  <meta name="description" content="2 Cartesian colinks | Elements of Cybernetics" />
+  <title>2 Cartesian links and colinks | Elements of Cybernetics</title>
+  <meta name="description" content="2 Cartesian links and colinks | Elements of Cybernetics" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Cartesian colinks | Elements of Cybernetics" />
+  <meta property="og:title" content="2 Cartesian links and colinks | Elements of Cybernetics" />
   <meta property="og:type" content="book" />
   
   
   <meta name="github-repo" content="jules-hedges/elements" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Cartesian colinks | Elements of Cybernetics" />
+  <meta name="twitter:title" content="2 Cartesian links and colinks | Elements of Cybernetics" />
   
   
   
@@ -76,8 +76,14 @@
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Foreword</a></li>
 <li class="chapter" data-level="1" data-path="00-background.html"><a href="00-background.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html"><i class="fa fa-check"></i><b>2</b> Cartesian colinks</a><ul>
-<li class="chapter" data-level="2.1" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#category-cartesian-colinks"><i class="fa fa-check"></i><b>2.1</b> The category of cartesian colinks</a></li>
+<li class="chapter" data-level="2" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html"><i class="fa fa-check"></i><b>2</b> Cartesian links and colinks</a><ul>
+<li class="chapter" data-level="2.1" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#category-cartesian-links"><i class="fa fa-check"></i><b>2.1</b> The category of cartesian links</a></li>
+<li class="chapter" data-level="2.2" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#category-cartesian-colinks"><i class="fa fa-check"></i><b>2.2</b> The category of cartesian colinks</a></li>
+<li class="chapter" data-level="2.3" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#basic-constructions-cartesian-colinks"><i class="fa fa-check"></i><b>2.3</b> Basic constructions for cartesian links and colinks</a></li>
+<li class="chapter" data-level="2.4" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#limits-colimits-cartesian-colinks"><i class="fa fa-check"></i><b>2.4</b> Limits and colimits of cartesian colinks</a></li>
+<li class="chapter" data-level="2.5" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#fibrational-structure-cartesian-links-colinks"><i class="fa fa-check"></i><b>2.5</b> Fibrational structure of cartesian links and colinks</a></li>
+<li class="chapter" data-level="2.6" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#double-category-colinks-links"><i class="fa fa-check"></i><b>2.6</b> The double category of colinks and links</a></li>
+<li class="chapter" data-level="2.7" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#cartesian-links-colinks-notes"><i class="fa fa-check"></i><b>2.7</b> Notes</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html"><i class="fa fa-check"></i><b>3</b> Actegories and enriched categories</a></li>
 </ul>
@@ -97,15 +103,54 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="cartesian-colinks" class="section level1">
-<h1><span class="header-section-number">2</span> Cartesian colinks</h1>
-<div id="category-cartesian-colinks" class="section level2">
-<h2><span class="header-section-number">2.1</span> The category of cartesian colinks</h2>
+<div id="cartesian-links-colinks" class="section level1">
+<h1><span class="header-section-number">2</span> Cartesian links and colinks</h1>
+<div id="category-cartesian-links" class="section level2">
+<h2><span class="header-section-number">2.1</span> The category of cartesian links</h2>
 <div class="definition">
-<p><span id="def:def-cartesian-colink" class="definition"><strong>Definition 2.1  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">X, X', Y, Y'</eq> be objects of <eq env="math">\mathcal C</eq>. A <strong>cartesian colink</strong> in <eq env="math">\binom{f'}{f} : \binom{X'}{X} \to \binom{Y'}{Y}</eq> in <eq env="math">{\mathcal{C}}</eq> is a pair of morphisms <eq env="math">f : X \to Y</eq> and <eq env="math">f' : X \times Y' \to X'</eq>. <eq env="math">f</eq> is called the <strong>forwards pass</strong> and <eq env="math">f'</eq> is called the <strong>backwards pass</strong>.</p>
+<p><span id="def:def-cartesian-link" class="definition"><strong>Definition 2.1  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">X, X', Y, Y'</eq> be objects of <eq env="math">{\mathcal{C}}</eq>. A <strong>cartesian link</strong> <eq env="math">\binom{f'}{f} : \binom{X'}{X} \to \binom{Y'}{Y}</eq> in <eq env="math">{\mathcal{C}}</eq> is a pair of morphisms <eq env="math">f : X \to Y</eq> and <eq env="math">f : X \times X' \to Y'</eq>.</p>
 </div>
 <div class="example">
-<p><span id="exm:ex-projection-colink" class="example"><strong>Example 2.1  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">X, Y</eq> be objects of <eq env="math">{\mathcal{C}}</eq>. There is a cartesian colink <eq env="math">\pi_1 : \binom{X \times Y}{X \times Y} \to \binom{X}{X}</eq>, also known as a <strong>lens</strong> <eq env="math">X \to Y</eq>, given by:</p>
+<p><span id="exm:ex-cartesian-forward-derivative" class="example"><strong>Example 2.1  </strong></span>Let <eq env="math">f : \mathbb R^m \to \mathbb R^n</eq> be a smooth function between Euclidean spaces. There is a cartesian link <eq env="math">D (f) : \binom{\mathbb R^m}{\mathbb R^m} \to \binom{\mathbb R^n}{\mathbb R^n}</eq> in the category <eq env="math">\mathbf{Euc}</eq> of Euclidean spaces and smooth functions, called the <strong>forward derivative link</strong> of <eq env="math">f</eq>, given by</p>
+<ul>
+<li>The [what] is <eq env="math">f : \mathbb R^m \to \mathbb R^n</eq></li>
+<li>The [what] is <eq env="math">f' : \mathbb R^m \times \mathbb R^m \to \mathbb R^n</eq> given by <eq env="math">f' (x, v) = v \cdot J_f (x)</eq>, where <eq env="math">J_f (x)</eq> is the Jacaobian of <eq env="math">f</eq> evaluated at <eq env="math">x</eq>, and <eq env="math">\cdot</eq> is multiplication of that matrix by the vector <eq env="math">v</eq>.</li>
+</ul>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-closed-link" class="proposition"><strong>Proposition 2.1  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a cartesian closed category. Then a colink <eq env="math">\binom{X'}{X} \to \binom{Y'}{Y}</eq> can be equivalently seen as a morphism <eq env="math">X \to Y \times [X', Y']</eq> in <eq env="math">{\mathcal{C}}</eq>.</p>
+</div>
+<div class="definition">
+<p><span id="def:def-cartesian-link-composition" class="definition"><strong>Definition 2.2  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">\binom{f'}{f} : \binom{X'}{X} \to \binom{Y'}{Y}</eq> and <eq env="math">\binom{g'}{g} : \binom{Y'}{Y} \to \binom{Z'}{Z}</eq> be cartesian links in <eq env="math">{\mathcal{C}}</eq>. The composition of links is given by <eq env="math">\binom{f'}{f} \binom{g'}{g} : \binom{X'}{X} \to \binom{Z'}{Z}</eq> where</p>
+<ul>
+<li>The [what] is <eq env="math">f g : X \to Z</eq></li>
+<li>The [what] is <eq env="math">(f g)' : X \times X' \to Z'</eq> given by [todo diagram]</li>
+</ul>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-link-composition-associative" class="proposition"><strong>Proposition 2.2  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">f : \binom{X'}{X} \to \binom{Y'}{Y}</eq>, <eq env="math">g : \binom{Y'}{Y} \to \binom{Z'}{Z}</eq> and <eq env="math">h : \binom{Z'}{Z} \to \binom{W'}{W}</eq> be cartesian links in <eq env="math">{\mathcal{C}}</eq>. Then <eq env="math">(\binom{f'}{f} \binom{g'}{g}) \binom{h'}{h} = \binom{f'}{f} (\binom{g'}{g} \binom{h'}{h})</eq>.</p>
+</div>
+<div class="definition">
+<p><span id="def:def-cartesian-link-identity" class="definition"><strong>Definition 2.3  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">X, X'</eq> be objects of <eq env="math">{\mathcal{C}}</eq>. The <strong>identity cartesian link</strong> <eq env="math">1_{\binom{X'}{X}} : \binom{X'}{X} \to \binom{X'}{X}</eq> is given by</p>
+<ul>
+<li>The [what] is the identity morphism <eq env="math">1_X : X \to X</eq></li>
+<li>The [what] is the projection <eq env="math">\pi_2 : X \times X' \to X'</eq></li>
+</ul>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-link-identity" class="proposition"><strong>Proposition 2.3  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">f : \binom{X'}{X} \to \binom{Y'}{Y}</eq> be a cartesian link in <eq env="math">{\mathcal{C}}</eq>. Then <eq env="math">1_{\binom{X'}{X}} f = f = f 1_{\binom{Y'}{Y}}</eq>.</p>
+</div>
+<div class="definition">
+<p><span id="def:def-category-cartesian-links" class="definition"><strong>Definition 2.4  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then <eq env="math">\overrightarrow{\mathscr L}({\mathcal{C}})</eq> is the category whose objects are pairs of objects of <eq env="math">{\mathcal{C}}</eq>, and whose morphisms are cartesian links in <eq env="math">{\mathcal{C}}</eq>.</p>
+</div>
+</div>
+<div id="category-cartesian-colinks" class="section level2">
+<h2><span class="header-section-number">2.2</span> The category of cartesian colinks</h2>
+<div class="definition">
+<p><span id="def:def-cartesian-colink" class="definition"><strong>Definition 2.5  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">X, X', Y, Y'</eq> be objects of <eq env="math">{\mathcal{C}}</eq>. A <strong>cartesian colink</strong> <eq env="math">\binom{f'}{f} : \binom{X'}{X} \to \binom{Y'}{Y}</eq> in <eq env="math">{\mathcal{C}}</eq> is a pair of morphisms <eq env="math">f : X \to Y</eq> and <eq env="math">f' : X \times Y' \to X'</eq>. <eq env="math">f</eq> is called the <strong>forwards pass</strong> and <eq env="math">f'</eq> is called the <strong>backwards pass</strong>.</p>
+</div>
+<div class="example">
+<p><span id="exm:ex-projection-colink" class="example"><strong>Example 2.2  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">X, Y</eq> be objects of <eq env="math">{\mathcal{C}}</eq>. There is a cartesian colink <eq env="math">\pi_1 : \binom{X \times Y}{X \times Y} \to \binom{X}{X}</eq>, also known as a <strong>lens</strong> <eq env="math">X \to Y</eq>, given by:</p>
 <ul>
 <li>The forwards pass is the projection <eq env="math">\pi_1 : X \times Y \to X</eq></li>
 <li>The backwards pass is <eq env="math">\pi_1' : (X \times Y) \times X \to X \times Y</eq> given by <eq env="math">\pi_1' ((x, y), x') = (x', y)</eq> [TODO - write with string diagram]</li>
@@ -113,62 +158,178 @@
 <p>Similarly there is a cartesian colink <eq env="math">\pi_2 : \binom{X \times Y}{X \times Y} \to \binom{Y}{Y}</eq>.</p>
 </div>
 <div class="example">
-<p><span id="exm:ex-cartesian-reverse-derivative" class="example"><strong>Example 2.2  </strong></span>Let <eq env="math">f : \mathbb R^m \to \mathbb R^n</eq> be a smooth function between Euclidean spaces. There is a cartesian colink <eq env="math">D (f) : \binom{\mathbb R^m}{\mathbb R^m} \to \binom{\mathbb R^n}{\mathbb R^n}</eq> in the category <eq env="math">\mathbf{Euc}</eq> of Euclidean spaces and smooth functions, called the <strong>reverse derivative colink</strong> of <eq env="math">f</eq>, given by</p>
+<p><span id="exm:ex-cartesian-reverse-derivative" class="example"><strong>Example 2.3  </strong></span>Let <eq env="math">f : \mathbb R^m \to \mathbb R^n</eq> be a smooth function between Euclidean spaces. There is a cartesian colink <eq env="math">D (f) : \binom{\mathbb R^m}{\mathbb R^m} \to \binom{\mathbb R^n}{\mathbb R^n}</eq> in the category <eq env="math">\mathbf{Euc}</eq> of Euclidean spaces and smooth functions, called the <strong>reverse derivative colink</strong> of <eq env="math">f</eq>, given by</p>
 <ul>
 <li>The forwards pass is <eq env="math">f : \mathbb R^m \to \mathbb R^n</eq></li>
 <li>The backrwards pass is <eq env="math">f' : \mathbb R^m \times \mathbb R^n \to \mathbb R^n</eq> given by <eq env="math">f' (x, v) = J_f (x)^\top \cdot v</eq>, where <eq env="math">J_f (x)^\top</eq> is the transpose Jacobian of <eq env="math">f</eq> evaluated at <eq env="math">x</eq>, and <eq env="math">\cdot</eq> is multiplication of that matrix by the vector <eq env="math">v</eq>.</li>
 </ul>
 </div>
 <div class="proposition">
-<p><span id="prp:prop-cartesian-closed-colink" class="proposition"><strong>Proposition 2.1  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a cartesian closed category. Then a colink <eq env="math">\binom{X'}{X} \to \binom{Y'}{Y}</eq> in <eq env="math">{\mathcal{C}}</eq> can be equivalently seen as a morphism <eq env="math">X \to Y \times (Y' \to X')</eq> in <eq env="math">{\mathcal{C}}</eq>.</p>
+<p><span id="prp:prop-cartesian-closed-colink" class="proposition"><strong>Proposition 2.4  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a cartesian closed category. Then a colink <eq env="math">\binom{X'}{X} \to \binom{Y'}{Y}</eq> in <eq env="math">{\mathcal{C}}</eq> can be equivalently seen as a morphism <eq env="math">X \to Y \times [Y', X']</eq> in <eq env="math">{\mathcal{C}}</eq>.</p>
 </div>
 <div class="definition">
-<p><span id="def:def-cartesian-colink-composition" class="definition"><strong>Definition 2.2  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">\binom{f'}{f} : \binom{X'}{X} \to \binom{Y'}{Y}</eq> and <eq env="math">\binom{g'}{g} : \binom{Y'}{Y} \to \binom{Z'}{Z}</eq> be cartesian colinks in <eq env="math">{\mathcal{C}}</eq>. The composition of the colinks is given by <eq env="math">\binom{f'}{f} \binom{g'}{g} : \binom{X'}{X} \to \binom{Z'}{Z}</eq> where</p>
+<p><span id="def:def-cartesian-colink-composition" class="definition"><strong>Definition 2.6  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">\binom{f'}{f} : \binom{X'}{X} \to \binom{Y'}{Y}</eq> and <eq env="math">\binom{g'}{g} : \binom{Y'}{Y} \to \binom{Z'}{Z}</eq> be cartesian colinks in <eq env="math">{\mathcal{C}}</eq>. The composition of the colinks is given by <eq env="math">\binom{f'}{f} \binom{g'}{g} : \binom{X'}{X} \to \binom{Z'}{Z}</eq> where</p>
 <ul>
 <li>The forwards pass is <eq env="math">f g : X \to Z</eq></li>
 <li>The backwards pass is <eq env="math">(f g)' : X \times Z' \to X'</eq> defined in the internal language of <eq env="math">{\mathcal{C}}</eq> by <eq env="math">(f g)' (x, z) = f' (x, g' (f (x), z))</eq> [TODO - write this definition in string diagrams instead]</li>
 </ul>
 </div>
 <div class="proposition">
-<p><span id="prp:prop-colink-composition-associative" class="proposition"><strong>Proposition 2.2  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">\binom{f'}{f} : \binom{X'}{X} \to \binom{Y'}{Y}</eq>, <eq env="math">\binom{g'}{g} : \binom{Y'}{Y} \to \binom{Z'}{Z}</eq> and <eq env="math">\binom{h'}{h} : \binom{Z'}{Z} \to \binom{W'}{W}</eq> be cartesian colinks in <eq env="math">{\mathcal{C}}</eq>. Then <eq env="math">(f g) h = f (g h)</eq>.</p>
+<p><span id="prp:prop-cartesian-colink-composition-associative" class="proposition"><strong>Proposition 2.5  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">\binom{f'}{f} : \binom{X'}{X} \to \binom{Y'}{Y}</eq>, <eq env="math">\binom{g'}{g} : \binom{Y'}{Y} \to \binom{Z'}{Z}</eq> and <eq env="math">\binom{h'}{h} : \binom{Z'}{Z} \to \binom{W'}{W}</eq> be cartesian colinks in <eq env="math">{\mathcal{C}}</eq>. Then <eq env="math">(\binom{f'}{f} \binom{g'}{g}) \binom{h'}{h} = \binom{f'}{f} (\binom{g'}{g} \binom{h'}{h})</eq>.</p>
 </div>
 <div class="definition">
-<p><span id="def:def-cartesian-colink-identity" class="definition"><strong>Definition 2.3  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">X, X'</eq> be objects of <eq env="math">{\mathcal{C}}</eq>. The <strong>identity cartesian colink</strong> <eq env="math">1_{\binom{X'}{X}} : \binom{X'}{X} \to \binom{X'}{X}</eq> is given by</p>
+<p><span id="def:def-cartesian-colink-identity" class="definition"><strong>Definition 2.7  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">X, X'</eq> be objects of <eq env="math">{\mathcal{C}}</eq>. The <strong>identity cartesian colink</strong> <eq env="math">1_{\binom{X'}{X}} : \binom{X'}{X} \to \binom{X'}{X}</eq> is given by</p>
 <ul>
 <li>The forwards pass is the identity morphism <eq env="math">1_X : X \to X</eq></li>
 <li>The backwwards pass is the projection <eq env="math">\pi_2 : X \times X' \to X'</eq></li>
 </ul>
 </div>
 <div class="proposition">
-<p><span id="prp:prop-cartesian-colink-identity" class="proposition"><strong>Proposition 2.3  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">f : \binom{X'}{X} \to \binom{Y'}{Y}</eq> be a cartesian colink in <eq env="math">{\mathcal{C}}</eq>. Then <eq env="math">1_{\binom{X'}{X}} f = f = f 1_{\binom{Y'}{Y}}</eq>.</p>
+<p><span id="prp:prop-cartesian-colink-identity" class="proposition"><strong>Proposition 2.6  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and let <eq env="math">f : \binom{X'}{X} \to \binom{Y'}{Y}</eq> be a cartesian colink in <eq env="math">{\mathcal{C}}</eq>. Then <eq env="math">1_{\binom{X'}{X}} f = f = f 1_{\binom{Y'}{Y}}</eq>.</p>
 </div>
 <div class="definition">
-<p><span id="def:def-category-cartesian-colinks" class="definition"><strong>Definition 2.4  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then <eq env="math">\overleftarrow{\mathscr L}({\mathcal{C}})</eq> is the category whose objects are pairs of objects of <eq env="math">{\mathcal{C}}</eq>, and whose morphisms are colinks in <eq env="math">{\mathcal{C}}</eq>.</p>
+<p><span id="def:def-category-cartesian-colinks" class="definition"><strong>Definition 2.8  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then <eq env="math">\overleftarrow{\mathscr L}({\mathcal{C}})</eq> is the category whose objects are pairs of objects of <eq env="math">{\mathcal{C}}</eq>, and whose morphisms are cartesian colinks in <eq env="math">{\mathcal{C}}</eq>.</p>
 </div>
 <div class="proposition">
-<p><span id="prp:prop-covariant-contravariant-embedding" class="proposition"><strong>Proposition 2.4  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then there is a functor <eq env="math">\binom{-}{-} : {\mathcal{C}} \times {\mathcal{C}}^\mathrm{op}\to \overleftarrow{\mathscr L}({\mathcal{C}})</eq> given by:</p>
+<p><span id="prp:prop-cartesian-reverse-derivative-functor" class="proposition"><strong>Proposition 2.7  </strong></span>There is a functor <eq env="math">D : \mathbf{Euc} \to \overleftarrow{\mathscr L}(\mathbf{Euc})</eq> given on objects by <eq env="math">D (X) = \binom{X}{X}</eq> and on morphisms by <eq env="math">D (f)</eq> from example <a href="#ex:ex-cartesian-reverse-derivative"><strong>??</strong></a>.</p>
+</div>
+</div>
+<div id="basic-constructions-cartesian-colinks" class="section level2">
+<h2><span class="header-section-number">2.3</span> Basic constructions for cartesian links and colinks</h2>
+<div class="proposition">
+<p><span id="prp:prop-covariant-covariant-embedding" class="proposition"><strong>Proposition 2.8  </strong></span>let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then there is a functor <eq env="math">\binom{-}{-} : {\mathcal{C}} \times {\mathcal{C}} \to \overrightarrow{\mathscr L}({\mathcal{C}})</eq> given by:</p>
 <ul>
 <li>On objects: <eq env="math">(X, X') \mapsto \binom{X'}{X}</eq></li>
 <li>On morphisms: <eq env="math">(f, g) \mapsto \binom{\pi_2 g}{f}</eq></li>
 </ul>
 </div>
 <div class="proposition">
-<p><span id="prp:prop-cartesian-colink-forwards-pass-functor" class="proposition"><strong>Proposition 2.5  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then there is a functor <eq env="math">\mathbb F : \overleftarrow{\mathscr L}({\mathcal{C}}) \to {\mathcal{C}}</eq>, called the <strong>forwards pass functor</strong>, given by:</p>
+<p><span id="prp:prop-covariant-contravariant-embedding" class="proposition"><strong>Proposition 2.9  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then there is a functor <eq env="math">\binom{-}{-} : {\mathcal{C}} \times {\mathcal{C}}^\mathrm{op}\to \overleftarrow{\mathscr L}({\mathcal{C}})</eq> given by:</p>
 <ul>
-<li>On objects, <eq env="math">\mathbb F \binom{X'}{X} = X</eq></li>
-<li>On morphisms, <eq env="math">\mathbb F \binom{f'}{f} = f</eq></li>
+<li>On objects: <eq env="math">(X, X') \mapsto \binom{X'}{X}</eq></li>
+<li>On morphisms: <eq env="math">(f, g) \mapsto \binom{\pi_2 g}{f}</eq></li>
 </ul>
 </div>
 <div class="proposition">
-<p><span id="prp:prop-cartesian-colink-continuation" class="proposition"><strong>Proposition 2.6  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then there is a functor <eq env="math">\mathbb K : \overleftarrow{\mathscr L}({\mathcal{C}})^\mathrm{op}\to \mathbf{Set}</eq>, called the <strong>continuation functor</strong>, given by:</p>
+<p><span id="prp:prop-cartesian-link-todo-functor" class="proposition"><strong>Proposition 2.10  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then there is a functor <eq env="math">\mathbb E : \overrightarrow{\mathscr L}({\mathcal{C}}) \to {\mathcal{C}}</eq> [todo name this thing], given by:</p>
 <ul>
-<li>On objects, <eq env="math">\mathbb K \binom{X'}{X} = {\mathcal{C}} (X, X')</eq></li>
-<li>On morphisms <eq env="math">\binom{f'}{f} : \binom{X'}{X} \to \binom{Y'}{Y}</eq>, <eq env="math">\mathbb K \binom{f'}{f} : {\mathcal{C}} (Y, Y') \to {\mathcal{C}} (X, X')</eq> is given by <eq env="math">\mathbb K \binom{f'}{f} (k) (x) = f' (x, k (f (x)))</eq> [TODO - write with string diagram]</li>
+<li>On objects, <eq env="math">\mathbb E \binom{X'}{X} = X</eq></li>
+<li>On morphisms <eq env="math">\mathbb E \binom{f'}{f} = f</eq>.</li>
 </ul>
 </div>
 <div class="proposition">
-<p><span id="prp:prop-cartesian-reverse-derivative-functor" class="proposition"><strong>Proposition 2.7  </strong></span>There is a functor <eq env="math">D : \mathbf{Euc} \to \overleftarrow{\mathscr L}(\mathbf{Euc})</eq> given on objects by <eq env="math">D (X) = \binom{X}{X}</eq> and on morphisms by <eq env="math">D (f)</eq> from example <a href="#ex:ex-cartesian-reverse-derivative"><strong>??</strong></a>.</p>
+<p><span id="prp:prop-cartesian-colink-forwards-pass-functor" class="proposition"><strong>Proposition 2.11  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then there is a functor <eq env="math">\mathbb F: \overleftarrow{\mathscr L}({\mathcal{C}}) \to {\mathcal{C}}</eq>, called the <strong>forwards pass functor</strong>, given by:</p>
+<ul>
+<li>On objects, <eq env="math">\mathbb F\binom{X'}{X} = X</eq></li>
+<li>On morphisms, <eq env="math">\mathbb F\binom{f'}{f} = f</eq></li>
+</ul>
 </div>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-link-functor" class="proposition"><strong>Proposition 2.12  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then there is a functor <eq env="math">\mathbb L : \overrightarrow{\mathscr L}({\mathcal{C}}) \to {\mathcal{C}}</eq>, called the <strong>link functor</strong>, given by:</p>
+<ul>
+<li>On objects, <eq env="math">\mathbb L \binom{X'}{X} = X \times X'</eq></li>
+<li>On morphisms, [todo write this down]</li>
+</ul>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-colink-continuation" class="proposition"><strong>Proposition 2.13  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then there is a functor <eq env="math">\mathbb K: \overleftarrow{\mathscr L}({\mathcal{C}})^\mathrm{op}\to \mathbf{Set}</eq>, called the <strong>continuation functor</strong>, given by:</p>
+<ul>
+<li>On objects, <eq env="math">\mathbb K\binom{X'}{X} = {\mathcal{C}} (X, X')</eq></li>
+<li>On morphisms <eq env="math">\binom{f'}{f} : \binom{X'}{X} \to \binom{Y'}{Y}</eq>, <eq env="math">\mathbb K\binom{f'}{f} : {\mathcal{C}} (Y, Y') \to {\mathcal{C}} (X, X')</eq> is given by <eq env="math">\mathbb K\binom{f'}{f} (k) (x) = f' (x, k (f (x)))</eq> [TODO - write with string diagram]</li>
+</ul>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-closed-colink-continuation" class="proposition"><strong>Proposition 2.14  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a cartesian closed category. Then there is a functor <eq env="math">\mathbb K: \overleftarrow{\mathscr L}({\mathcal{C}})^\mathrm{op}\to {\mathcal{C}}</eq>, called the <strong>closed continuation functor</strong>, given by:</p>
+<ul>
+<li>On objects, <eq env="math">\mathbb K\binom{X'}{X} = [X, X']</eq></li>
+<li>On morphisms [TODO]</li>
+</ul>
+</div>
+<p>[TODO - talk about the ambiguous notation for <eq env="math">\mathbb K</eq>, it could be made precise using enrichment but I don’t consider it worth it]</p>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-link-embedding-adjunction" class="proposition"><strong>Proposition 2.15  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Let <eq env="math">\left&lt; \mathbb E, \mathbb L \right&gt; : \overrightarrow{\mathscr L}({\mathcal{C}}) \to {\mathcal{C}} \times {\mathcal{C}}</eq> be the functor given by <eq env="math">\binom{X'}{X} \mapsto (X, X \times X')</eq>. Then there is an adjunction <eq env="math">\left&lt; \mathbb E, \mathbb L \right&gt; \dashv \binom{-}{-}</eq>.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-closed-colink-embedding-adjunction" class="proposition"><strong>Proposition 2.16  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a cartesian closed category. Let <eq env="math">\left&lt; \mathbb F, \mathbb K\right&gt; : \overleftarrow{\mathscr L}({\mathcal{C}}) \to {\mathcal{C}} \times {\mathcal{C}}^\mathrm{op}</eq> be the functor given by <eq env="math">\binom{X'}{X} \mapsto (X, [X, X'])</eq>. Then there is an adjunction <eq env="math">\left&lt; \mathbb F, \mathbb K\right&gt; \dashv \binom{-}{-}</eq>.</p>
+</div>
+</div>
+<div id="limits-colimits-cartesian-colinks" class="section level2">
+<h2><span class="header-section-number">2.4</span> Limits and colimits of cartesian colinks</h2>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-links-products" class="proposition"><strong>Proposition 2.17  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite (all) products. Then <eq env="math">\overrightarrow{\mathscr L}({\mathcal{C}})</eq> has finite (all) products given on objects by <eq env="math">\binom{X'}{X} \times \binom{Y'}{Y} = \binom{Y \times Y'}{X \times X'}</eq>, respectively <eq env="math">\prod_{i : I} \binom{X'_i}{X_i} = \binom{\prod_{i : I} X'_i}{\prod_{i : I} X_i}</eq>.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-links-terminal-object" class="proposition"><strong>Proposition 2.18  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> with a category with finite products whose terminal object is <eq env="math">1</eq>. Then <eq env="math">\binom{1}{1}</eq> is terminal in <eq env="math">\overrightarrow{\mathscr L}({\mathcal{C}})</eq>.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-colinks-products" class="proposition"><strong>Proposition 2.19  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite (all) products and finite (all) distributive coproducts. Then <eq env="math">\overleftarrow{\mathscr L}({\mathcal{C}})</eq> has finite (all) products given on objects by <eq env="math">\binom{X'}{X} \times \binom{Y'}{Y} = \binom{X' + Y'}{X \times Y}</eq>, respectively <eq env="math">\prod_{i : I} \binom{X'_i}{X_i} = \binom{\sum_{i : I} X'_i}{\prod_{i : I} X_i}</eq>.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-colinks-terminal-object" class="proposition"><strong>Proposition 2.20  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, with an initial object <eq env="math">0</eq> and a terminal object <eq env="math">1</eq>. Then <eq env="math">\binom{0}{1}</eq> is terminal in <eq env="math">\overleftarrow{\mathscr L}({\mathcal{C}})</eq>.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-colinks-coproducts" class="proposition"><strong>Proposition 2.21  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products and finite (all) distributive coproducts. Then <eq env="math">\overleftarrow{\mathscr L}({\mathcal{C}})</eq> has finite (all) coproducts that have the form <eq env="math">\binom{Z}{X} + \binom{Z}{Y} = \binom{Z}{X + Y}</eq>, respectively <eq env="math">\sum_{i : I} \binom{Z}{X_i} = \binom{Z}{\sum_{i : I} X_i}</eq>.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-colinks-initial-object" class="proposition"><strong>Proposition 2.22  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products and an initial object <eq env="math">0</eq>. Then for any object <eq env="math">X</eq> of <eq env="math">{\mathcal{C}}</eq>, <eq env="math">\binom{X}{0}</eq> is initial in <eq env="math">\overleftarrow{\mathscr L}({\mathcal{C}})</eq>.</p>
+</div>
+<div class="example">
+<p><span id="exm:prop-cartesian-colinks-other-coproducts" class="example"><strong>Example 2.4  </strong></span>The category <eq env="math">\overleftarrow{\mathscr L}(\mathbf{Set})</eq> does not have all coproducts, but it does have some coproducts that are not of the form of proposition  [todo fix ref].</p>
+<ul>
+<li>[todo example of a missing coproduct]</li>
+<li>An example of a coproduct present in <eq env="math">\overleftarrow{\mathscr L}(\mathbf{Set})</eq> not of the form of [todo ref] is <eq env="math">\binom{0}{1} + \binom{1}{1} = \binom{0}{2}</eq></li>
+</ul>
+</div>
+</div>
+<div id="fibrational-structure-cartesian-links-colinks" class="section level2">
+<h2><span class="header-section-number">2.5</span> Fibrational structure of cartesian links and colinks</h2>
+<div class="proposition">
+<p><span id="prp:prop-reader-comonad" class="proposition"><strong>Proposition 2.23  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and <eq env="math">X</eq> an object of <eq env="math">{\mathcal{C}}</eq>. Then the functor <eq env="math">X \times - : {\mathcal{C}} \to {\mathcal{C}}</eq> is a comonad on <eq env="math">{\mathcal{C}}</eq>.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-reader-comonad-kleisli" class="proposition"><strong>Proposition 2.24  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and <eq env="math">X</eq> an object of <eq env="math">{\mathcal{C}}</eq>. Then the cokleisli category of <eq env="math">X \times -</eq> is isomorphic to <eq env="math">{\mathcal{C}} [X]</eq>, defined by freely adjoining a point <eq env="math">1 \to X</eq> to <eq env="math">{\mathcal{C}}</eq> and closing under finite products. [TODO cite Lambek + Scott]</p>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-reader-comonad-indexed" class="proposition"><strong>Proposition 2.25  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and <eq env="math">f : X \to Y</eq> a morphism of <eq env="math">{\mathcal{C}}</eq>. Then <eq env="math">f</eq> induces a functor <eq env="math">f^* : {\mathcal{C}} [Y] \to {\mathcal{C}} [X]</eq>.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-colink-forwards-pass-fibration" class="proposition"><strong>Proposition 2.26  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then the forwards pass functor <eq env="math">\mathbb F: \overleftarrow{\mathscr L}({\mathcal{C}}) \to {\mathcal{C}}</eq> is a fibration.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-cartesian-colink-fibres" class="proposition"><strong>Proposition 2.27  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then:</p>
+<ul>
+<li>For each object <eq env="math">X</eq> of <eq env="math">{\mathcal{C}}</eq>, the fibre <eq env="math">\mathbb F^{-1} (X)</eq> of <eq env="math">\overleftarrow{\mathscr L}({\mathcal{C}})</eq> over <eq env="math">X</eq> is isomorphic to <eq env="math">{\mathcal{C}} [X]^\mathrm{op}</eq></li>
+<li>The each morphism <eq env="math">f : X \to Y</eq> of <eq env="math">{\mathcal{C}}</eq>, the reindexing functor <eq env="math">\mathbb F^{-1} (f) : {\mathcal{C}} [Y]^\mathrm{op}\to {\mathcal{C}} [X]^\mathrm{op}</eq> is given by <eq env="math">f^*</eq>.</li>
+</ul>
+</div>
+</div>
+<div id="double-category-colinks-links" class="section level2">
+<h2><span class="header-section-number">2.6</span> The double category of colinks and links</h2>
+<div class="definition">
+<p><span id="def:def-colink-link-commutation" class="definition"><strong>Definition 2.9  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. We say that a square of the form [todo] where <eq env="math">h_1</eq> and <eq env="math">h_2</eq> are colinks in <eq env="math">{\mathcal{C}}</eq> and <eq env="math">v_1</eq> and <eq env="math">v_2</eq> are links in <eq env="math">{\mathcal{C}}</eq> formally commutes if:</p>
+<ul>
+<li>[todo condition 1]</li>
+<li>[todo condition 2]</li>
+</ul>
+</div>
+<div class="definition">
+<p><span id="def:def-double-category-colinks-links" class="definition"><strong>Definition 2.10  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then <eq env="math">{\mathcal{L}} ({\mathcal{C}})</eq> is the double category where:</p>
+<ul>
+<li>Objects are pairs of objects of <eq env="math">{\mathcal{C}}</eq></li>
+<li>Loose 1-cells are cartesian colinks in <eq env="math">{\mathcal{C}}</eq></li>
+<li>Tight 1-cells are cartesian links in <eq env="math">{\mathcal{C}}</eq></li>
+<li>There is a unique 2-cell [write] when the square formally commutes.</li>
+</ul>
+</div>
+</div>
+<div id="cartesian-links-colinks-notes" class="section level2">
+<h2><span class="header-section-number">2.7</span> Notes</h2>
+<ul>
+<li>Links first appeared to my knowledge as morphisms in the total category of Bart Jacobs’ <em>simple fibration</em> [Jacobs, Categorical logic and type theory]</li>
+<li>Their central role in categorical systems theory was recognised by David Jaz Myers [Myers, Categorical systems theory]</li>
+<li>Colinks have a much more complicated history [todo]</li>
+<li>Wiring diagrams operad?</li>
+</ul>
 
 </div>
 </div>
