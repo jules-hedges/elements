@@ -80,12 +80,18 @@
 <li class="chapter" data-level="2.1" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#category-cartesian-links"><i class="fa fa-check"></i><b>2.1</b> The category of cartesian links</a></li>
 <li class="chapter" data-level="2.2" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#category-cartesian-colinks"><i class="fa fa-check"></i><b>2.2</b> The category of cartesian colinks</a></li>
 <li class="chapter" data-level="2.3" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#basic-constructions-cartesian-colinks"><i class="fa fa-check"></i><b>2.3</b> Basic constructions for cartesian links and colinks</a></li>
-<li class="chapter" data-level="2.4" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#limits-colimits-cartesian-colinks"><i class="fa fa-check"></i><b>2.4</b> Limits and colimits of cartesian colinks</a></li>
-<li class="chapter" data-level="2.5" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#fibrational-structure-cartesian-links-colinks"><i class="fa fa-check"></i><b>2.5</b> Fibrational structure of cartesian links and colinks</a></li>
-<li class="chapter" data-level="2.6" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#double-category-colinks-links"><i class="fa fa-check"></i><b>2.6</b> The double category of colinks and links</a></li>
-<li class="chapter" data-level="2.7" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#cartesian-links-colinks-notes"><i class="fa fa-check"></i><b>2.7</b> Notes</a></li>
+<li class="chapter" data-level="2.4" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#products-coproducts-cartesian-links-colinks"><i class="fa fa-check"></i><b>2.4</b> Products and coproducts of cartesian links and colinks</a></li>
+<li class="chapter" data-level="2.5" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#tensor-product-cartesian-colinks"><i class="fa fa-check"></i><b>2.5</b> The tensor product of cartesian colinks</a></li>
+<li class="chapter" data-level="2.6" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#fibrational-structure-cartesian-links-colinks"><i class="fa fa-check"></i><b>2.6</b> Fibrational structure of cartesian links and colinks</a></li>
+<li class="chapter" data-level="2.7" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#double-category-colinks-links"><i class="fa fa-check"></i><b>2.7</b> The double category of colinks and links</a></li>
+<li class="chapter" data-level="2.8" data-path="01-cartesian-colinks.html"><a href="01-cartesian-colinks.html#cartesian-links-colinks-notes"><i class="fa fa-check"></i><b>2.8</b> Notes</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html"><i class="fa fa-check"></i><b>3</b> Actegories and enriched categories</a></li>
+<li class="chapter" data-level="3" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html"><i class="fa fa-check"></i><b>3</b> Actegories and enriched categories</a><ul>
+<li class="chapter" data-level="3.1" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html#actegories"><i class="fa fa-check"></i><b>3.1</b> Actegories</a></li>
+<li class="chapter" data-level="3.2" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html#enriched-categories"><i class="fa fa-check"></i><b>3.2</b> Encriched categories</a></li>
+<li class="chapter" data-level="3.3" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html#enriched-links-colinks"><i class="fa fa-check"></i><b>3.3</b> Enriched links and colinks</a></li>
+<li class="chapter" data-level="3.4" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html#parametrisation"><i class="fa fa-check"></i><b>3.4</b> Parametrisation</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -105,21 +111,56 @@
             <section class="normal" id="section-">
 <div id="actegories-enriched" class="section level1">
 <h1><span class="header-section-number">3</span> Actegories and enriched categories</h1>
+<div id="actegories" class="section level2">
+<h2><span class="header-section-number">3.1</span> Actegories</h2>
+</div>
+<div id="enriched-categories" class="section level2">
+<h2><span class="header-section-number">3.2</span> Encriched categories</h2>
+</div>
+<div id="enriched-links-colinks" class="section level2">
+<h2><span class="header-section-number">3.3</span> Enriched links and colinks</h2>
 <div class="definition">
-<p><span id="def:def-actegory" class="definition"><strong>Definition 3.1  </strong></span>Let <eq env="math">\mathcal C</eq> be a monoidal category. A <eq env="math">\mathcal C</eq>-actegory is a category <eq env="math">\mathcal D</eq> equipped with a bifunctor <eq env="math">\bullet: \mathcal C \times \mathcal D \to \mathcal D</eq> satisfying…</p>
+<p><span id="def:def-connection" class="definition"><strong>Definition 3.1  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> and <eq env="math">{\mathcal{D}}</eq> be categories. A <strong>connection</strong> <eq env="math">{\mathcal{C}} \to {\mathcal{D}}</eq> [todo, come up with a better name probably] consists of a monoidal category <eq env="math">{\mathcal{M}}</eq>, an enrichment of <eq env="math">{\mathcal{D}}</eq> in <eq env="math">{\mathcal{M}}</eq>, and a right action of <eq env="math">{\mathcal{M}}</eq> on <eq env="math">{\mathcal{C}}</eq>.</p>
+</div>
+<div class="definition">
+<p><span id="def:def-enriched-link" class="definition"><strong>Definition 3.2  </strong></span>Let <eq env="math">{\mathcal{M}}</eq> be a monoidal category. Let <eq env="math">{\mathcal{D}}</eq> be a category enriched in <eq env="math">{\mathcal{M}}</eq>, and let <eq env="math">{\mathcal{C}}</eq> be a category equipped with a right action of <eq env="math">{\mathcal{M}}</eq>. Let <eq env="math">X, Y</eq> be objects of <eq env="math">{\mathcal{C}}</eq> and <eq env="math">X', Y'</eq> objects of <eq env="math">{\mathcal{D}}</eq>. An <strong>enriched link</strong> <eq env="math">f : \binom{X'}{X} \to \binom{Y'}{Y}</eq> is a morphism <eq env="math">f : X \to Y \bullet [X', Y']</eq> in <eq env="math">{\mathcal{C}}</eq>.</p>
+</div>
+<div class="definition">
+<p><span id="def:def-enriched-colink" class="definition"><strong>Definition 3.3  </strong></span>Let <eq env="math">{\mathcal{M}}</eq> be a monoidal category. Let <eq env="math">{\mathcal{D}}</eq> be a category enriched in <eq env="math">{\mathcal{M}}</eq>, and let <eq env="math">{\mathcal{C}}</eq> be a category equipped with a left action of <eq env="math">{\mathcal{M}}</eq>. Let <eq env="math">X, Y</eq> be objects of <eq env="math">{\mathcal{C}}</eq> and <eq env="math">X', Y'</eq> objects of <eq env="math">{\mathcal{D}}</eq>. An <strong>enriched colink</strong> <eq env="math">f : \binom{X'}{X} \to \binom{Y'}{Y}</eq> is a morphism <eq env="math">f : X \to [Y', X'] \bullet Y</eq> in <eq env="math">{\mathcal{C}}</eq>.</p>
+</div>
+<div class="definition">
+<p><span id="def:def-enriched-link-composition" class="definition"><strong>Definition 3.4  </strong></span>Let <eq env="math">f : \binom{X'}{X} \to \binom{Y'}{Y}</eq> and <eq env="math">g : \binom{Y'}{Y} \to \binom{Z'}{Z}</eq> be enriched links. The composition <eq env="math">fg</eq> is the enriched link <eq env="math">\binom{X'}{X} \to \binom{Z'}{Z}</eq> given by
+<eq env="displaymath"> X \xrightarrow{f} [X', Y'] \bullet Y \xrightarrow{[X', Y'] \bullet g} [X', Y'] \bullet [Y', X'] \bullet Z \xrightarrow{\cong} [X', Y'] \otimes [Y', Z'] \bullet Z \xrightarrow{\circ \bullet Z} [X', Z'] \bullet Z </eq></p>
+</div>
+<div class="definition">
+<p><span id="def:def-enriched-colink-composition" class="definition"><strong>Definition 3.5  </strong></span>Let <eq env="math">f : \binom{X'}{X} \to \binom{Y'}{Y}</eq> and <eq env="math">g : \binom{Y'}{Y} \to \binom{Z'}{Z}</eq> be enriched colinks. The composition <eq env="math">fg</eq> is the enriched colink <eq env="math">\binom{X'}{X} \to \binom{Z'}{Z}</eq> given by
+<eq env="displaymath"> X \xrightarrow{f} Y \bullet [Y', X'] \xrightarrow{g \bullet [Y', X']} Z \bullet [Z', Y'] \bullet [Y', X'] \xrightarrow{\cong} Z \bullet [Z', Y'] \otimes [Y', X'] \xrightarrow{Z \bullet \circ} Z \bullet [Z', Y'] </eq></p>
+</div>
+</div>
+<div id="parametrisation" class="section level2">
+<h2><span class="header-section-number">3.4</span> Parametrisation</h2>
+<div class="definition">
+<p><span id="def:def-parametrised-morphism" class="definition"><strong>Definition 3.6  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category and <eq env="math">{\mathcal{M}}</eq> a monoidal category with a right action on <eq env="math">{\mathcal{C}}</eq>. Let <eq env="math">X and Y</eq> be objects of <eq env="math">{\mathcal{C}}</eq>. A <strong>parametrised morphism</strong> <eq env="math">f : X \to Y</eq> in <eq env="math">{\mathcal{C}}</eq> consists of an object <eq env="math">M</eq> of <eq env="math">{\mathcal{M}}</eq> and a morphism <eq env="math">f : X \bullet M \to Y</eq>. We call <eq env="math">M</eq> the <strong>parameter object</strong> of <eq env="math">f</eq>.</p>
+</div>
+<div class="definition">
+<p><span id="def:def-parametrised-morphism-composition" class="definition"><strong>Definition 3.7  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category and <eq env="math">{\mathcal{M}}</eq> a monoidal category with a right action on <eq env="math">{\mathcal{C}}</eq>.Let <eq env="math">f : X \to Y</eq> and <eq env="math">g : Y \to Z</eq> be parametrised morphisms with parameter objects <eq env="math">M, N</eq>.
+The composition <eq env="math">fg : X \to Z</eq> is the parametrised morphism with parameter object <eq env="math">M \otimes N</eq> given by
+<eq env="displaymath"> X \bullet M \otimes N \xrightarrow{\cong} X \bullet M \bullet N \xrightarrow{f \bullet N} Y \bullet N \xrightarrow{g} Z </eq></p>
+</div>
+<div class="definition">
+<p><span id="def:def-parametrised-morphism-2-cell" class="definition"><strong>Definition 3.8  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category and <eq env="math">{\mathcal{M}}</eq> a monoidal category with a right action on <eq env="math">{\mathcal{M}}</eq>. Let <eq env="math">f : X \to Y</eq> and <eq env="math">g : Z \to W</eq> be parametrised morphisms with parameter objects <eq env="math">M, N</eq>. A 2-cell <eq env="math">f \Rightarrow g</eq> consists of morphisms <eq env="math">X \to Z</eq> and <eq env="math">Y \to W</eq> of <eq env="math">{\mathcal{C}}</eq> and <eq env="math">M \to N</eq> of <eq env="math">{\mathcal{M}}</eq> such that the following diagram commutes: [todo]</p>
 </div>
 <div class="proposition">
-<p><span id="prp:prop-actegory-endofunctors" class="proposition"><strong>Proposition 3.1  </strong></span>Let <eq env="math">\mathcal C</eq> be a monoidal category. The following structures are equivalent:</p>
-<ul>
-<li><eq env="math">\mathcal C</eq>-actegories <eq env="math">\mathcal D</eq></li>
-<li>Categories <eq env="math">\mathcal D</eq> with a strong monoidal functor <eq env="math">\mathcal C \to [\mathcal D, \mathcal D]</eq> where <eq env="math">[\mathcal D, \mathcal D]</eq> is the category of endofunctors on <eq env="math">\mathcal D</eq>, with composition as the monoidal product.</li>
-</ul>
+<p><span id="prp:prop-parametrised-morphism-vertical-category" class="proposition"><strong>Proposition 3.1  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category and <eq env="math">{\mathcal{M}}</eq> a monoidal category with a right action on <eq env="math">{\mathcal{C}}</eq>. There is a category <eq env="math">\overleftarrow{\mathscr P}({\mathcal{C}})_v</eq> whose objects are parametrised morphisms and morphisms are 2-cells.</p>
 </div>
-<div class="theorem">
-<p><span id="thm:my-th" class="theorem"><strong>Theorem 3.1  </strong></span>Hello</p>
+<div class="proposition">
+<p><span id="prp:def-parameter-functor" class="proposition"><strong>Proposition 3.2  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category and <eq env="math">{\mathcal{M}}</eq> a monoidal category with a right action on <eq env="math">{\mathcal{C}}</eq>. The functor <eq env="math">\mathbb P : \overleftarrow{\mathscr P}({\mathcal{C}})_v \to {\mathcal{M}}</eq>, taking a parametrised morphism to its parameter object.</p>
 </div>
-<p>Theorem <a href="02-actegories-enriched.html#thm:my-th">3.1</a></p>
+<div class="proposition">
+<p><span id="prp:prop-parametrised-morphism-vertical-category-fibration" class="proposition"><strong>Proposition 3.3  </strong></span>The functor <eq env="math">\mathbb P : \overleftarrow{\mathscr P}({\mathcal{C}})_v \to {\mathcal{M}}</eq> is a fibration.</p>
+</div>
 
+</div>
 </div>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
 
