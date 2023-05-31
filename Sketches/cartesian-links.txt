@@ -36,3 +36,14 @@ If f : (X, X') -> (Y, Y') link then P (f) : X x Y -> X' x Y'
 (C x C) ((X, X x X'), (Y, Y')) = Link ((X, X'), (Y, Y'))
 
 (C x C^op) ((X, X -> X'), (Y, Y')) = Colink ((X, X'), (Y, Y'))
+
+=====
+
+For coproducts: (-, Z) : C -> Colink(C) has a right adjoint so it preserves coproducts
+Colink(C) ((X, Z), (Y, Y')) = C (X, R_Z (Y, Y'))
+R_Z : Colink(C) -> C, R_Z (Y, Y') = Y x (Y' -> Z)
+
+Does (-, Z) : C -> Link(C) has a right adjoint?
+Link(C) ((X, Z), (Y, Y')) = C (X, R_Z (Y, Y'))
+R_Z (Y, Y') = Y x (Z -> Y')
+

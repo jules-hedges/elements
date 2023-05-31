@@ -27,3 +27,14 @@ x, y : C
 x', y' : D
 x -> hom_D (y', x') . y
 (morphism in C)
+
+******
+
+M monoidal category
+M acts on C
+D enriched in M
+A [what] D -> C is a monoidal category M, an enrichment of D in M and an action of M on C
+
+D^op x D -> M
+M x C -> C
+D^op x D -> M -> [C, C]

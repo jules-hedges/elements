@@ -17,6 +17,8 @@
 \providecommand\op{\mathrm{op}}
 \providecommand\link{\overrightarrow{\mathscr L}}
 \providecommand\colink{\overleftarrow{\mathscr L}}
+\providecommand\para{\overleftarrow{\mathscr P}}
+\providecommand\copara{\overrightarrow{\mathscr P}}
 \providecommand\forwards{\mathbb F}
 \providecommand\continuation{\mathbb K}
 \providecommand\pair[2]{\binom{#2}{#1}}
