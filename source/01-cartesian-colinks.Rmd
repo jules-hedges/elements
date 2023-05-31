@@ -26,7 +26,7 @@ Writing $\link (\cal C) \left( \pair{X}{X'}, \pair{Y}{Y'} \right)$ for the set o
 Let $\cal C$ be a category with finite products, and let $\pair{f}{f'} : \pair{X}{X'} \to \pair{Y}{Y'}$ and $\pair{g}{g'} : \pair{Y}{Y'} \to \pair{Z}{Z'}$ be cartesian links in $\cal C$. The composition of links is given by $\pair{f}{f'} \comp \pair{g}{g'} : \pair{X}{X'} \to \pair{Z}{Z'}$ where
 
 - The [what] is $f \comp g : X \to Z$
-- The [what] is $(f \comp g)' : X \times X' \to Z'$ given by [todo diagram]
+- The [what] is $(f \comp g)' : X \times X' \to Z'$ given by [this diagram](https://varkor.github.io/tangle/?t=W1tbXV0sW1tbMCxbXV0sWzAsW11dLFswLFtdXSxbMCxbXV0sWzAsW11dLFswLFtdXSxbMCxbXV1dLFtbMCxbXV0sWzIsWzJdXSxbMSxbMCwxLDAsMV1dLFswLFtdXSxbMixbM11dLFswLFtdXSxbMCxbXV1dLFtbMSxbMCwxLDAsMV1dLFsxLFsxLDAsMSwxXV0sWzAsW11dLFswLFtdXSxbMixbMV1dLFswLFtdXSxbMCxbXV1dLFtbMCxbXV0sWzIsWzFdXSxbMSxbMCwxLDAsMV1dLFswLFtdXSxbMCxbXV0sWzAsW11dLFsxLFswLDEsMCwxXV1dLFtbMCxbXV0sWzAsW11dLFswLFtdXSxbMCxbXV0sWzEsWzAsMSwwLDFdXSxbMCxbXV0sWzAsW11dXSxbWzEsWzAsMSwwLDFdXSxbMSxbMCwxLDAsMV1dLFsxLFswLDEsMCwxXV0sWzAsW11dLFswLFtdXSxbMCxbXV0sWzAsW11dXV0sW1swLDEuNSwyLjUsWyIiXV0sWzAsLTAuNSwyLjUsWyJYIl1dLFswLC0wLjUsNS41LFsiWCciXV0sWzAsNS41LDMuNSxbImcnIiwxLDJdXSxbMCwzLjUsMS41LFsiZiIsMSwxXV0sWzAsMy41LDQuNSxbImYnIiwxLDJdXSxbMCw3LjUsMy41LFsiWiciXV0sWzAsNSwxLjUsWyJZIl1dLFswLDQuNSw1LFsiWSciXV1dXQ==&c=F5A3A3,F5CCA3,F5F5A3,CCF5A3,A3F5A3,A3F5CC,A3F5F5,A3CCF5,A3A3F5,CCA3F5,F5A3F5,F5A3CC)
 :::
 
 ::: {.proposition #prop-cartesian-link-composition-associative}
@@ -44,6 +44,13 @@ Let $\cal C$ be a category with finite products, and let $X, X'$ be objects of $
 Let $\cal C$ be a category with finite products, and let $f : \pair{X}{X'} \to \pair{Y}{Y'}$ be a cartesian link in $\cal C$. Then $\id_{\pair{X}{X'}} \comp f = f = f \comp \id_{\pair{Y}{Y'}}$.
 :::
 
+::: {.proof}
+In both cases, the first passes [fix name] are equal by uniltality in $\cal C$. For the second passes:
+
+- Left unitality: the composite is depicted by [this diagram](https://varkor.github.io/tangle/?t=W1tbXV0sW1tbMCxbXV0sWzIsWzJdXSxbMSxbMCwxLDAsMV1dLFsyLFszXV0sWzAsW11dLFswLFtdXSxbMCxbXV1dLFtbMSxbMCwxLDAsMV1dLFsxLFsxLDAsMSwxXV0sWzAsW11dLFsyLFsxXV0sWzEsWzAsMSwwLDFdXSxbMCxbXV0sWzAsW11dXSxbWzAsW11dLFsyLFsxXV0sWzEsWzAsMSwwLDFdXSxbMCxbXV0sWzAsW11dLFsxLFswLDEsMCwxXV0sWzEsWzAsMSwwLDFdXV0sW1sxLFswLDEsMCwxXV0sWzEsWzAsMSwwLDFdXSxbMSxbMCwxLDAsMV1dLFsxLFswLDEsMCwxXV0sWzEsWzAsMSwwLDFdXSxbMCxbXV0sWzAsW11dXV0sW1swLDEuNSwxLjUsWyIiXV0sWzAsMywyLjUsWyIiXV0sWzAsNSwyLjUsWyJmJyIsMSwyXV0sWzAsLTAuNSwxLjUsWyJYIl1dLFswLC0wLjUsMy41LFsiWCciXV0sWzAsNy41LDIuNSxbIlknIl1dXV0=&c=F5A3A3,F5CCA3,F5F5A3,CCF5A3,A3F5A3,A3F5CC,A3F5F5,A3CCF5,A3A3F5,CCA3F5,F5A3F5,F5A3CC), which is equal to $f'$ since copy-delete is a comonoid.
+- Right unitality: the composition is depicted by [this diagram](https://varkor.github.io/tangle/?t=W1tbXV0sW1tbMCxbXV0sWzIsWzJdXSxbMSxbMCwxLDAsMV1dLFswLFtdXSxbMixbM11dLFswLFtdXSxbMCxbXV1dLFtbMSxbMCwxLDAsMV1dLFsxLFsxLDAsMSwxXV0sWzAsW11dLFswLFtdXSxbMixbMV1dLFsxLFswLDEsMCwxXV0sWzAsW11dXSxbWzAsW11dLFsyLFsxXV0sWzEsWzAsMSwwLDFdXSxbMCxbXV0sWzAsW11dLFsyLFsyXV0sWzEsWzAsMSwwLDFdXV0sW1swLFtdXSxbMCxbXV0sWzAsW11dLFswLFtdXSxbMSxbMCwxLDAsMV1dLFsyLFswXV0sWzAsW11dXSxbWzEsWzAsMSwwLDFdXSxbMSxbMCwxLDAsMV1dLFsxLFswLDEsMCwxXV0sWzAsW11dLFswLFtdXSxbMCxbXV0sWzAsW11dXV0sW1swLDEuNSwxLjUsWyIiXV0sWzAsMy41LDAuNSxbImYiLDEsMV1dLFswLDMuNSwzLjUsWyJmJyIsMSwyXV0sWzAsNiwxLjUsWyIiXV0sWzAsLTAuNSwxLjUsWyJYIl1dLFswLC0wLjUsNC41LFsiWCciXV0sWzAsNy41LDIuNSxbIlknIl1dXV0=&c=F5A3A3,F5CCA3,F5F5A3,CCF5A3,A3F5A3,A3F5CC,A3F5F5,A3CCF5,A3A3F5,CCA3F5,F5A3F5,F5A3CC), which is equal to $g'$ since $f$ is causal and copy-delete is a comonoid.
+:::
+
 ::: {.definition #def-category-cartesian-links}
 Let $\cal C$ be a category with finite products. Then $\link (\cal C)$ is the category whose objects are pairs of objects of $\cal C$, and whose morphisms are cartesian links in $\cal C$.
 :::
@@ -53,6 +60,8 @@ Let $\cal C$ be a category with finite products. Then $\link (\cal C)$ is the ca
 ::: {.definition #def-cartesian-colink}
 Let $\cal C$ be a category with finite products, and let $X, X', Y, Y'$ be objects of $\cal C$. A **cartesian colink** $\pair{f}{f'} : \pair{X}{X'} \to \pair{Y}{Y'}$ in $\cal C$ is a pair of morphisms $f : X \to Y$ and $f' : X \times Y' \to X'$. $f$ is called the **forwards pass** and $f'$ is called the **backwards pass**.
 :::
+
+We depict a generic colink $\pair{f}{f'}$ as in [this diagram](https://varkor.github.io/tangle/?t=W1tbXV0sW1tbMCxbXV0sWzAsW11dLFswLFtdXSxbMCxbXV0sWzAsW11dLFswLFtdXV0sW1sxLFswLDEsMCwxXV0sWzEsWzAsMSwwLDFdXSxbMCxbXV0sWzAsW11dLFsxLFswLDEsMCwxXV0sWzEsWzAsMSwwLDFdXV0sW1sxLFswLDEsMCwxXV0sWzEsWzAsMSwwLDFdXSxbMCxbXV0sWzAsW11dLFsxLFswLDEsMCwxXV0sWzEsWzAsMSwwLDFdXV0sW1swLFtdXSxbMCxbXV0sWzAsW11dLFswLFtdXSxbMCxbXV0sWzAsW11dXV0sW1swLDMsMixbIihmLGYnKSIsMiwyXV0sWzEsMSwxLjUsWzFdXSxbMSwxLDIuNSxbMF1dLFsxLDUsMS41LFsxXV0sWzEsNSwyLjUsWzBdXSxbMCwtMC41LDEuNSxbIlgnIl1dLFswLDYuNSwxLjUsWyJZJyJdXSxbMCwtMC41LDIuNSxbIlgiXV0sWzAsNi41LDIuNSxbIlkiXV1dXQ==&c=F5A3A3,F5CCA3,F5F5A3,CCF5A3,A3F5A3,A3F5CC,A3F5F5,A3CCF5,A3A3F5,CCA3F5,F5A3F5,F5A3CC).
 
 ::: {.example #ex-projection-colink}
 Let $\cal C$ be a category with finite products, and let $X, Y$ be objects of $\cal C$. There is a cartesian colink $\pi_1 : \pair{X \times Y}{X \times Y} \to \pair{X}{X}$, also known as a **lens** $X \to Y$, given by:
@@ -145,14 +154,14 @@ Let $\cal C$ be a category with finite products. Then there is a functor $\forwa
 Let $\cal C$ be a category with finite products. Then there is a functor $\mathbb L : \link (\cal C) \to \cal C$, called the **link functor**, given by:
 
 - On objects, $\mathbb L \pair{X}{X'} = X \times X'$
-- On morphisms, [todo write this down]
+- On links $\pair{f}{f'} : \pair{X}{X'} \to \pair{Y}{Y'}$, the morphism $\mathbb L \pair{f}{f'} : X \times X' \to Y \times Y'$ is given by [this diagram](https://varkor.github.io/tangle/?t=W1tbXV0sW1tbMCxbXV0sWzIsWzJdXSxbMSxbMCwxLDAsMV1dLFswLFtdXSxbMSxbMCwxLDAsMV1dXSxbWzEsWzAsMSwwLDFdXSxbMSxbMSwwLDEsMV1dLFswLFtdXSxbMCxbXV0sWzAsW11dXSxbWzAsW11dLFsyLFsxXV0sWzEsWzAsMSwwLDFdXSxbMCxbXV0sWzAsW11dXSxbWzAsW11dLFswLFtdXSxbMCxbXV0sWzAsW11dLFsxLFswLDEsMCwxXV1dLFtbMSxbMCwxLDAsMV1dLFsxLFswLDEsMCwxXV0sWzEsWzAsMSwwLDFdXSxbMCxbXV0sWzAsW11dXV0sW1swLDEuNSwxLjUsWyIiXV0sWzAsLTAuNSwxLjUsWyJYIl1dLFswLDMuNSwwLjUsWyJmIiwxLDFdXSxbMCwzLjUsMy41LFsiZiciLDEsMl1dLFswLC0wLjUsNC41LFsiWCciXV0sWzAsNS41LDAuNSxbIlkiXV0sWzAsNS41LDMuNSxbIlknIl1dXV0=&c=F5A3A3,F5CCA3,F5F5A3,CCF5A3,A3F5A3,A3F5CC,A3F5F5,A3CCF5,A3A3F5,CCA3F5,F5A3F5,F5A3CC)
 :::
 
 ::: {.proposition #prop-cartesian-colink-continuation}
 Let $\cal C$ be a category with finite products. Then there is a functor $\continuation : \colink (\cal C)^\op \to \mathbf{Set}$, called the **continuation functor**, given by:
 
 - On objects, $\continuation \pair{X}{X'} = \cal C (X, X')$
-- On morphisms $\pair{f}{f'} : \pair{X}{X'} \to \pair{Y}{Y'}$, $\continuation \pair{f}{f'} : \cal C (Y, Y') \to \cal C (X, X')$ is given by $\continuation \pair{f}{f'} (k) (x) = f' (x, k (f (x)))$ [TODO - write with string diagram]
+- On morphisms $\pair{f}{f'} : \pair{X}{X'} \to \pair{Y}{Y'}$, $\continuation \pair{f}{f'} : \cal C (Y, Y') \to \cal C (X, X')$ is given by $\continuation \pair{f}{f'} (k)$ given by [this diagram](https://varkor.github.io/tangle/?t=W1tbXV0sW1tbXSxbMixbMl1dLFsxLFswLDEsMCwxXV0sWzEsWzAsMSwwLDFdXSxbMSxbMCwxLDAsMV1dLFsxLFswLDEsMCwxXV0sWzEsWzAsMSwwLDFdXSxbMCxbXV0sWzAsW11dXSxbWzEsWzAsMSwwLDFdXSxbMSxbMSwwLDEsMV1dLFswLFtdXSxbMCxbXV0sWzAsW11dLFswLFtdXSxbMCxbXV0sWzAsW11dLFsxLFswLDEsMCwxXV1dLFtbXSxbMixbMV1dLFsxLFswLDEsMCwxXV0sWzAsW11dLFsxLFswLDEsMCwxXV0sWzAsW11dLFsxLFswLDEsMCwxXV0sWzAsW11dLFswLFtdXV1dLFtbMCwtMC41LDEuNSxbIlgiXV0sWzAsMS41LDEuNSxbIiJdXSxbMCwzLjUsMi41LFsiZiIsMSwxXV0sWzAsNS41LDIuNSxbImsiLDEsMV1dLFswLDcuNSwxLjUsWyJmJyIsMSwyXV0sWzAsOS41LDEuNSxbIlgnIl1dLFswLDQuNSwzLFsiWSJdXSxbMCw2LjUsMyxbIlknIl1dXV0=&c=F5A3A3,F5CCA3,F5F5A3,CCF5A3,A3F5A3,A3F5CC,A3F5F5,A3CCF5,A3A3F5,CCA3F5,F5A3F5,F5A3CC)
 :::
 
 ::: {.proposition #prop-cartesian-colink-continuation-representable}
