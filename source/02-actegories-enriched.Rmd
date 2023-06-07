@@ -6,21 +6,35 @@
 
 ## Enriched links and colinks {#enriched-links-colinks}
 
-::: {.definition #def-connection}
-Let $\cal C$ and $\cal D$ be categories. A **connection** $\cal C \to \cal D$ [todo, come up with a better name probably] consists of a monoidal category $\cal M$, an enrichment of $\cal D$ in $\cal M$, and a right action of $\cal M$ on $\cal C$.
-:::
-
 ::: {.definition #def-enriched-link}
-Let $\cal M$ be a monoidal category. Let $\cal D$ be a category enriched in $\cal M$, and let $\cal C$ be a category equipped with a right action of $\cal M$. Let $X, Y$ be objects of $\cal C$ and $X', Y'$ objects of $\cal D$. An **enriched link** $f : \pair{X}{X'} \to \pair{Y}{Y'}$ is a morphism $f : X \to Y \bullet [X', Y']$ in $\cal C$.
-:::
-
-::: {.definition #def-enriched-colink}
-Let $\cal M$ be a monoidal category. Let $\cal D$ be a category enriched in $\cal M$, and let $\cal C$ be a category equipped with a left action of $\cal M$. Let $X, Y$ be objects of $\cal C$ and $X', Y'$ objects of $\cal D$. An **enriched colink** $f : \pair{X}{X'} \to \pair{Y}{Y'}$ is a morphism $f : X \to [Y', X'] \bullet Y$ in $\cal C$.
+Let $\cal M$ be a monoidal category. Let $\cal D$ be a category enriched in $\cal M$, and let $\cal C$ be a category equipped with a left action of $\cal M$. Let $X, Y$ be objects of $\cal C$ and $X', Y'$ objects of $\cal D$. An **enriched link** $f : \pair{X}{X'} \to \pair{Y}{Y'}$ is a morphism $f : X \to [X', Y'] \bullet Y$ in $\cal C$.
 :::
 
 ::: {.definition #def-enriched-link-composition}
 Let $f : \pair{X}{X'} \to \pair{Y}{Y'}$ and $g : \pair{Y}{Y'} \to \pair{Z}{Z'}$ be enriched links. The composition $fg$ is the enriched link $\pair{X}{X'} \to \pair{Z}{Z'}$ given by
 \[ X \xrightarrow{f} [X', Y'] \bullet Y \xrightarrow{[X', Y'] \bullet g} [X', Y'] \bullet [Y', X'] \bullet Z \xrightarrow{\cong} [X', Y'] \otimes [Y', Z'] \bullet Z \xrightarrow{\circ \bullet Z} [X', Z'] \bullet Z \]
+:::
+
+::: {.proposition #prop-enriched-link-composition-associative}
+Let $f : \pair{X}{X'} \to \pair{Y}{Y'}$, $g : \pair{Y}{Y'} \to \pair{Z}{Z'}$ and $\pair{h}{h'} : \pair{Z}{Z'} \to \pair{W}{W'}$ be enriched links. Then $(fg)h = f(gh)$.
+:::
+
+::: {.definition #def-enriched-link-identity}
+Let $\cal M$ be a monoidal category. Let $\cal D$ be a category enriched in $\cal M$, and let $\cal C$ be a category equipped with a left action of $\cal M$. Let $X$ be an object of $\cal C$ and $X'$ an object of $\cal D$. The identity enriched link $\pair{X}{X'} \to \pair{X}{X'}$ is the morphism $X \to [X', X'] \bullet X$ given by 
+\[ X \xrightarrow\cong I \bullet X \xrightarrow{\id_{X'} \bullet X} [X', X'] \bullet X \]
+:::
+
+::: {.proposition #prop-enriched-link-composition-unital}
+Let $f : \pair{X}{X'} \to \pair{Y}{Y'}$ be an enriched link. Then $\id_{\pair{X}{X'}} f = f = f \id_{\pair{Y}{Y'}}$.
+:::
+
+::: {.proof}
+- Left unit: [diagram](https://q.uiver.app/#q=WzAsNyxbMCw2LCJYIl0sWzAsMCwiSSBcXGJ1bGxldCBYIl0sWzUsMCwiW1gnLCBYJ10gXFxidWxsZXQgW1gnLCBZJ10gXFxidWxsZXQgWSJdLFs4LDMsIltYJywgWCddIFxcb3RpbWVzIFtYJywgWSddIFxcYnVsbGV0IFkiXSxbNSw2LCJbWCcsIFknXSBcXGJ1bGxldCBZIl0sWzUsMywiSSBcXG90aW1lcyBbWCcsIFknXSBcXGJ1bGxldCBZIl0sWzMsMywiSSBcXGJ1bGxldCBbWCcsIFknXSBcXGJ1bGxldCBZIl0sWzAsMSwiXFxjb25nIl0sWzIsMywiXFxjb25nIl0sWzQsNSwiXFxjb25nIiwyXSxbMCw0LCJmIiwyXSxbNSwzLCIxX3tYJ30gXFxvdGltZXMgW1gnLCBZJ10gXFxidWxsZXQgWSIsMV0sWzUsMiwiMV97WCd9IFxcYnVsbGV0IFtYJywgWSddIFxcYnVsbGV0IFkiLDFdLFsxLDIsIjFfe1gnfSBcXGJ1bGxldCBmIiwxXSxbMyw0LCJcXGNpcmMgXFxidWxsZXQgWSIsMV0sWzEsNiwiSSBcXGJ1bGxldCBmIiwxXSxbNiwyLCIxX3tYJ30gXFxidWxsZXQgW1gnLCBZJ10gXFxidWxsZXQgWSIsMV0sWzYsNSwiXFxjb25nIiwxXSxbNCw2LCJcXGNvbmciLDFdXQ==)
+- Right unit: [todo]
+:::
+
+::: {.definition #def-enriched-colink}
+Let $\cal M$ be a monoidal category. Let $\cal D$ be a category enriched in $\cal M$, and let $\cal C$ be a category equipped with a right action of $\cal M$. Let $X, Y$ be objects of $\cal C$ and $X', Y'$ objects of $\cal D$. An **enriched colink** $f : \pair{X}{X'} \to \pair{Y}{Y'}$ is a morphism $f : X \to Y \bullet [Y', X']$ in $\cal C$.
 :::
 
 ::: {.definition #def-enriched-colink-composition}
@@ -31,7 +45,7 @@ Let $f : \pair{X}{X'} \to \pair{Y}{Y'}$ and $g : \pair{Y}{Y'} \to \pair{Z}{Z'}$ 
 ## Parametrisation {#parametrisation}
 
 ::: {.definition #def-parametrised-morphism}
-Let $\cal C$ be a category and $\cal M$ a monoidal category with a right action on $\cal C$. Let $X and Y$ be objects of $\cal C$. A **parametrised morphism** $f : X \to Y$ in $\cal C$ consists of an object $M$ of $\cal M$ and a morphism $f : X \bullet M \to Y$. We call $M$ the **parameter object** of $f$.
+Let $\cal C$ be a category and $\cal M$ a monoidal category with a right action on $\cal C$. Let $X$ and $Y$ be objects of $\cal C$. A **parametrised morphism** $f : X \to Y$ in $\cal C$ consists of an object $M$ of $\cal M$ and a morphism $f : X \bullet M \to Y$. We call $M$ the **parameter object** of $f$.
 :::
 
 ::: {.definition #def-parametrised-morphism-composition}
@@ -40,12 +54,32 @@ The composition $fg : X \to Z$ is the parametrised morphism with parameter objec
 \[ X \bullet M \otimes N \xrightarrow{\cong} X \bullet M \bullet N \xrightarrow{f \bullet N} Y \bullet N \xrightarrow{g} Z \]
 :::
 
+::: {.definition #def-parametrised-morphism-identity}
+Let $\cal C$ be a category and $\cal M$ a monoidal category with a right action on $\cal C$. Let $X$ be an object of $\cal C$. The identity parametrised morphism $\id_X : X \to X$ is given by the monoidal unit $I$ of $\cal C$ and the identity morphism $X \bullet I \to X$.
+:::
+
 ::: {.definition #def-parametrised-morphism-2-cell}
-Let $\cal C$ be a category and $\cal M$ a monoidal category with a right action on $\cal M$. Let $f : X \to Y$ and $g : Z \to W$ be parametrised morphisms with parameter objects $M, N$. A 2-cell $f \Rightarrow g$ consists of morphisms $X \to Z$ and $Y \to W$ of $\cal C$ and $M \to N$ of $\cal M$ such that the following diagram commutes: [todo]
+Let $\cal C$ be a category and $\cal M$ a monoidal category with a right action on $\cal M$. Let $f : X \to Y$ and $g : Z \to W$ be parametrised morphisms with parameter objects $M, N$. A 2-cell $f \Rightarrow g$ consists of morphisms $X \to Z$ and $Y \to W$ of $\cal C$ and $M \to N$ of $\cal   M$ such that the following diagram commutes: [todo]
 :::
 
 ::: {.proposition #prop-parametrised-morphism-vertical-category}
 Let $\cal C$ be a category and $\cal M$ a monoidal category with a right action on $\cal C$. There is a category $\para (\cal C)_v$ whose objects are parametrised morphisms and morphisms are 2-cells.
+:::
+
+::: {.proposition #prop-parametrised-morphism-source-target-functors}
+Let $\cal C$ be a category and $\cal M$ a monoidal category with a right action on $\cal C$. There are functors $S, T : \para (\cal C)_v \to \cal C$ respectively taking a parametrised morphism to its source and its target object.
+:::
+
+::: {.proposition #prop-parametrised-morphism-composition-associative}
+Let $\cal C$ be a category and $\cal M$ a monoidal category with a right action on $\cal C$. Let $f : X \to Y$, $g : Y \to Z$ and $h : Z \to W$ be parametrised morphisms in $\cal C$. Then $(fg)h \cong f(gh)$ in $\para (\cal C)_v$.
+:::
+
+::: {.proposition #prop-parametrised-morphism-composition-unital}
+Let $\cal C$ be a category and $\cal M$ a monoidal category with a right action on $\cal C$. Let $f : X \to Y$ be a parametrised morphism in $\cal C$. Then $\id_X f \cong f \cong f \id_Y$ in $\para (\cal C)_v$.
+:::
+
+::: {.proposition #prop-parametrised-morphism-double-category}
+Let $\cal C$ be a category and $\cal M$ a monoidal category with a right action on $\cal C$. There is a double category $\para (\cal C)$ whose objects are objects of $\cal C$, loose 1-cells are parametrised morphisms of $\cal C$, tight 1-cells are ordinary morphisms of $\cal C$, and 2-cells are morphisms of $\cal M$.
 :::
 
 ::: {.proposition #def-parameter-functor}
@@ -55,3 +89,14 @@ Let $\cal C$ be a category and $\cal M$ a monoidal category with a right action 
 ::: {.proposition #prop-parametrised-morphism-vertical-category-fibration}
 The functor $\mathbb P : \para (\cal C)_v \to \cal M$ is a fibration.
 :::
+
+# Parametrised colinks {#parametrised-colinks}
+
+The central construction of categorical cybernetics is categories of parametrised colinks. At this stage the symmetry breaks: we always parametrise colinks, and consider morphisms between them given by non-parametrised links.
+
+Let $\cal C$ be a category with finite products, and consider the category $\colink (\cal C)$. This category acts on itself by the tensor product of colinks. A parametrised colink $\pair{X}{X'} \to \pair{Y}{Y'}$ consists of a colink $\pair{X}{X'} \otimes \pair{P}{P'} \to \pair{Y}{Y'}$. Unpacking, this is:
+
+- A pair of objects $P$ and $P'$
+- A forwards pass $X \times P \to Y$
+- A backwards pass $X \times P \times Y' \to X'$
+- A backwards pass on parameters $X \times P \times Y' \to P'$
