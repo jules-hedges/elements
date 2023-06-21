@@ -42,7 +42,7 @@ Let $f : \pair{X}{X'} \to \pair{Y}{Y'}$ and $g : \pair{Y}{Y'} \to \pair{Z}{Z'}$ 
 \[ X \xrightarrow{f} Y \bullet [Y', X'] \xrightarrow{g \bullet [Y', X']} Z \bullet [Z', Y'] \bullet [Y', X'] \xrightarrow{\cong} Z \bullet [Z', Y'] \otimes [Y', X'] \xrightarrow{Z \bullet \circ} Z \bullet [Z', Y'] \]
 :::
 
-## Parametrisation {#parametrisation}
+## Parametrisation for actegories {#parametrisation-actegories}
 
 ::: {.definition #def-parametrised-morphism}
 Let $\cal C$ be a category and $\cal M$ a monoidal category with a right action on $\cal C$. Let $X$ and $Y$ be objects of $\cal C$. A **parametrised morphism** $f : X \to Y$ in $\cal C$ consists of an object $M$ of $\cal M$ and a morphism $f : X \bullet M \to Y$. We call $M$ the **parameter object** of $f$.
@@ -58,12 +58,20 @@ The composition $fg : X \to Z$ is the parametrised morphism with parameter objec
 Let $\cal C$ be a category and $\cal M$ a monoidal category with a right action on $\cal C$. Let $X$ be an object of $\cal C$. The identity parametrised morphism $\id_X : X \to X$ is given by the monoidal unit $I$ of $\cal C$ and the identity morphism $X \bullet I \to X$.
 :::
 
-::: {.definition #def-parametrised-morphism-2-cell}
-Let $\cal C$ be a category and $\cal M$ a monoidal category with a right action on $\cal M$. Let $f : X \to Y$ and $g : Z \to W$ be parametrised morphisms with parameter objects $M, N$. A 2-cell $f \Rightarrow g$ consists of morphisms $X \to Z$ and $Y \to W$ of $\cal C$ and $M \to N$ of $\cal   M$ such that the following diagram commutes: [todo]
+::: {.definition #def-parametrised-morphism-globular-2-cell}
+Let $X$ and $Y$ be objects of $\cal C$. Then there is a category $\para (\cal C)_g (X, Y)$ where
+- Objects are pairs of an object $M$ of $\cal M$ and a morphism $f : X \bullet M \to Y$ of $\cal C$
+- Morphisms $(M, f) \to (N, g)$ are morphisms $M \to N$ such that [diagram]
 :::
 
-::: {.proposition #prop-parametrised-morphism-vertical-category}
-Let $\cal C$ be a category and $\cal M$ a monoidal category with a right action on $\cal C$. There is a category $\para (\cal C)_v$ whose objects are parametrised morphisms and morphisms are 2-cells.
+::: {.proposition}
+$\para (\cal C)_g (-, -)$ defines a functor $\cal C^\op \times \cal C \to \mathbf{Cat}$.
+:::
+
+::: {.definition}
+We define $\para (\cal C)_v$ as the total category $\iint \para (\cal C)_g$ regarded as a two-sided fibration. Concretely:
+- Objects of $\para (\cal C)_v$ are parametrised morphisms $X \bullet M \to Y$
+- Morphisms from $f : X \bullet M \to Y$ to $g : X' \bullet N \to Y'$ are triples of morphisms $X \to X'$ and $Y \to Y'$ of $\cal C$ and $M \to N$ of $\cal M$ such that [diagram]
 :::
 
 ::: {.proposition #prop-parametrised-morphism-source-target-functors}
@@ -90,7 +98,33 @@ Let $\cal C$ be a category and $\cal M$ a monoidal category with a right action 
 The functor $\mathbb P : \para (\cal C)_v \to \cal M$ is a fibration.
 :::
 
-# Parametrised colinks {#parametrised-colinks}
+## Parametrisation for enriched categories {#parametrisation-enriched-categories}
+
+::: {.definition #def-parametrised-morphism}
+Let $\cal M$ be a monoidal category and $\cal C$ be a category enriched in $\cal M$. Let $X$ and $Y$ be objects of $\cal C$. A **parametrised morphism** $f : X \to Y$ in $\cal C$ consists of an object $M$ of $\cal M$ and a morphism $f : \cal M \to [X, Y]$. We call $M$ the **parameter object** of $f$.
+:::
+
+::: {.proposition #prop-parametrised-morphism-slice}
+Let $\cal M$ be a monoidal category and $\cal C$ be a cateogry enriched in $\cal M$. Let $X$ and $Y$ be objects of $\cal C$. Then the slice category $\cal M / [X, Y]$ has as its objects the parametrised morphisms $X \to Y$, i.e. pairs of an object $M$ of $\cal M$ and a morphism $M \to [X, Y]$.
+:::
+
+::: {.proposition #prop-parametrised-morphism-slice-indexed}
+There is a functor $\cal M / [-, -] : \cal C^\op \times \cal C \to \mathbf{Cat}$ given by the composite
+\[ \cal C^\op \times \cal C \xrightarrow{[-, -]} \cal M \xrightarrow{\cal M / -} \mathbf{Cat} \]
+:::
+
+Sightly more concretely, in the case that $\cal M = \mathbf{Set}$, a parametrised morphism $X \to Y$ consists of a set $M$ and a function $f : M \to \cal C (X, Y)$. Given morphisms $s : X' \to X$ and $t : Y \to Y'$ of $\cal C$, the functor $\cal M / [s, t] : \cal M / [X, Y] \to \cal M / [X', Y']$ takes the object $f$ to the parametrised morphism $(\cal M / [s, t]) (f) : M \to [X', Y']$ taking $m$ to the composite
+\[ X' \xrightarrow{s} X \xrightarrow{f (m)} Y \xrightarrow{t} Y' \]
+
+::: {.definition #prop-parametrised-morphism-vertical-category}
+Let $\cal M$ be a monoidal category and $\cal C$ a category enriched in $\cal M$. The category $\para (\cal C)_v$ is defined as the total category $\iint \cal M / [-, -]$ regarded as a two-sided fibration.
+
+Concretely, objects of $\para (\cal C)_v$ are parametrised morphisms $f : M \to [X, Y]$, and a morphism from $f$ to $g : N \to [X', Y']$ is a triple of morphisms $X \to X'$ and $Y \to Y'$ in $\cal C$ and $M \to N$ in $\cal M$ such that [todo diagram]
+
+The fibration $\para (\cal C)_v \to \cal C$ taking $f : M \to [X, Y]$ to $X$ is called the **domain fibration**, and the opfibration $\para (\cal C)_v \to \cal C$ taking $f : M \to [X, Y]$ to $Y$ is called the **codomain opfibration**.
+:::
+
+## Parametrised colinks {#parametrised-colinks}
 
 The central construction of categorical cybernetics is categories of parametrised colinks. At this stage the symmetry breaks: we always parametrise colinks, and consider morphisms between them given by non-parametrised links.
 
