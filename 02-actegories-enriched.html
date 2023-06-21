@@ -90,9 +90,10 @@
 <li class="chapter" data-level="3.1" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html#actegories"><i class="fa fa-check"></i><b>3.1</b> Actegories</a></li>
 <li class="chapter" data-level="3.2" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html#enriched-categories"><i class="fa fa-check"></i><b>3.2</b> Encriched categories</a></li>
 <li class="chapter" data-level="3.3" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html#enriched-links-colinks"><i class="fa fa-check"></i><b>3.3</b> Enriched links and colinks</a></li>
-<li class="chapter" data-level="3.4" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html#parametrisation"><i class="fa fa-check"></i><b>3.4</b> Parametrisation</a></li>
+<li class="chapter" data-level="3.4" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html#parametrisation-actegories"><i class="fa fa-check"></i><b>3.4</b> Parametrisation for actegories</a></li>
+<li class="chapter" data-level="3.5" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html#parametrisation-enriched-categories"><i class="fa fa-check"></i><b>3.5</b> Parametrisation for enriched categories</a></li>
+<li class="chapter" data-level="3.6" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html#parametrised-colinks"><i class="fa fa-check"></i><b>3.6</b> Parametrised colinks</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html#parametrised-colinks"><i class="fa fa-check"></i><b>4</b> Parametrised colinks</a></li>
 </ul>
 
       </nav>
@@ -152,8 +153,8 @@
 <eq env="displaymath"> X \xrightarrow{f} Y \bullet [Y', X'] \xrightarrow{g \bullet [Y', X']} Z \bullet [Z', Y'] \bullet [Y', X'] \xrightarrow{\cong} Z \bullet [Z', Y'] \otimes [Y', X'] \xrightarrow{Z \bullet \circ} Z \bullet [Z', Y'] </eq></p>
 </div>
 </div>
-<div id="parametrisation" class="section level2">
-<h2><span class="header-section-number">3.4</span> Parametrisation</h2>
+<div id="parametrisation-actegories" class="section level2">
+<h2><span class="header-section-number">3.4</span> Parametrisation for actegories</h2>
 <div class="definition">
 <p><span id="def:def-parametrised-morphism" class="definition"><strong>Definition 3.6  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category and <eq env="math">{\mathcal{M}}</eq> a monoidal category with a right action on <eq env="math">{\mathcal{C}}</eq>. Let <eq env="math">X</eq> and <eq env="math">Y</eq> be objects of <eq env="math">{\mathcal{C}}</eq>. A <strong>parametrised morphism</strong> <eq env="math">f : X \to Y</eq> in <eq env="math">{\mathcal{C}}</eq> consists of an object <eq env="math">M</eq> of <eq env="math">{\mathcal{M}}</eq> and a morphism <eq env="math">f : X \bullet M \to Y</eq>. We call <eq env="math">M</eq> the <strong>parameter object</strong> of <eq env="math">f</eq>.</p>
 </div>
@@ -166,10 +167,17 @@ The composition <eq env="math">fg : X \to Z</eq> is the parametrised morphism wi
 <p><span id="def:def-parametrised-morphism-identity" class="definition"><strong>Definition 3.8  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category and <eq env="math">{\mathcal{M}}</eq> a monoidal category with a right action on <eq env="math">{\mathcal{C}}</eq>. Let <eq env="math">X</eq> be an object of <eq env="math">{\mathcal{C}}</eq>. The identity parametrised morphism <eq env="math">1_X : X \to X</eq> is given by the monoidal unit <eq env="math">I</eq> of <eq env="math">{\mathcal{C}}</eq> and the identity morphism <eq env="math">X \bullet I \to X</eq>.</p>
 </div>
 <div class="definition">
-<p><span id="def:def-parametrised-morphism-2-cell" class="definition"><strong>Definition 3.9  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category and <eq env="math">{\mathcal{M}}</eq> a monoidal category with a right action on <eq env="math">{\mathcal{M}}</eq>. Let <eq env="math">f : X \to Y</eq> and <eq env="math">g : Z \to W</eq> be parametrised morphisms with parameter objects <eq env="math">M, N</eq>. A 2-cell <eq env="math">f \Rightarrow g</eq> consists of morphisms <eq env="math">X \to Z</eq> and <eq env="math">Y \to W</eq> of <eq env="math">{\mathcal{C}}</eq> and <eq env="math">M \to N</eq> of <eq env="math">{\mathcal{M}}</eq> such that the following diagram commutes: [todo]</p>
+<p><span id="def:def-parametrised-morphism-globular-2-cell" class="definition"><strong>Definition 3.9  </strong></span>Let <eq env="math">X</eq> and <eq env="math">Y</eq> be objects of <eq env="math">{\mathcal{C}}</eq>. Then there is a category <eq env="math">\overleftarrow{\mathscr P}({\mathcal{C}})_g (X, Y)</eq> where
+- Objects are pairs of an object <eq env="math">M</eq> of <eq env="math">{\mathcal{M}}</eq> and a morphism <eq env="math">f : X \bullet M \to Y</eq> of <eq env="math">{\mathcal{C}}</eq>
+- Morphisms <eq env="math">(M, f) \to (N, g)</eq> are morphisms <eq env="math">M \to N</eq> such that [diagram]</p>
 </div>
 <div class="proposition">
-<p><span id="prp:prop-parametrised-morphism-vertical-category" class="proposition"><strong>Proposition 3.3  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category and <eq env="math">{\mathcal{M}}</eq> a monoidal category with a right action on <eq env="math">{\mathcal{C}}</eq>. There is a category <eq env="math">\overleftarrow{\mathscr P}({\mathcal{C}})_v</eq> whose objects are parametrised morphisms and morphisms are 2-cells.</p>
+<p><span id="prp:unlabeled-div-9" class="proposition"><strong>Proposition 3.3  </strong></span><eq env="math">\overleftarrow{\mathscr P}({\mathcal{C}})_g (-, -)</eq> defines a functor <eq env="math">{\mathcal{C}}^\mathrm{op}\times {\mathcal{C}} \to \mathbf{Cat}</eq>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-10" class="definition"><strong>Definition 3.10  </strong></span>We define <eq env="math">\overleftarrow{\mathscr P}({\mathcal{C}})_v</eq> as the total category <eq env="math">\iint \overleftarrow{\mathscr P}({\mathcal{C}})_g</eq> regarded as a two-sided fibration. Concretely:
+- Objects of <eq env="math">\overleftarrow{\mathscr P}({\mathcal{C}})_v</eq> are parametrised morphisms <eq env="math">X \bullet M \to Y</eq>
+- Morphisms from <eq env="math">f : X \bullet M \to Y</eq> to <eq env="math">g : X' \bullet N \to Y'</eq> are triples of morphisms <eq env="math">X \to X'</eq> and <eq env="math">Y \to Y'</eq> of <eq env="math">{\mathcal{C}}</eq> and <eq env="math">M \to N</eq> of <eq env="math">{\mathcal{M}}</eq> such that [diagram]</p>
 </div>
 <div class="proposition">
 <p><span id="prp:prop-parametrised-morphism-source-target-functors" class="proposition"><strong>Proposition 3.4  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category and <eq env="math">{\mathcal{M}}</eq> a monoidal category with a right action on <eq env="math">{\mathcal{C}}</eq>. There are functors <eq env="math">S, T : \overleftarrow{\mathscr P}({\mathcal{C}})_v \to {\mathcal{C}}</eq> respectively taking a parametrised morphism to its source and its target object.</p>
@@ -190,9 +198,28 @@ The composition <eq env="math">fg : X \to Z</eq> is the parametrised morphism wi
 <p><span id="prp:prop-parametrised-morphism-vertical-category-fibration" class="proposition"><strong>Proposition 3.9  </strong></span>The functor <eq env="math">\mathbb P : \overleftarrow{\mathscr P}({\mathcal{C}})_v \to {\mathcal{M}}</eq> is a fibration.</p>
 </div>
 </div>
+<div id="parametrisation-enriched-categories" class="section level2">
+<h2><span class="header-section-number">3.5</span> Parametrisation for enriched categories</h2>
+<div class="definition">
+<p><span id="def:def-parametrised-morphism" class="definition"><strong>Definition 3.6  </strong></span>Let <eq env="math">{\mathcal{M}}</eq> be a monoidal category and <eq env="math">{\mathcal{C}}</eq> be a category enriched in <eq env="math">{\mathcal{M}}</eq>. Let <eq env="math">X</eq> and <eq env="math">Y</eq> be objects of <eq env="math">{\mathcal{C}}</eq>. A <strong>parametrised morphism</strong> <eq env="math">f : X \to Y</eq> in <eq env="math">{\mathcal{C}}</eq> consists of an object <eq env="math">M</eq> of <eq env="math">{\mathcal{M}}</eq> and a morphism <eq env="math">f : {\mathcal{M}} \to [X, Y]</eq>. We call <eq env="math">M</eq> the <strong>parameter object</strong> of <eq env="math">f</eq>.</p>
 </div>
-<div id="parametrised-colinks" class="section level1">
-<h1><span class="header-section-number">4</span> Parametrised colinks</h1>
+<div class="proposition">
+<p><span id="prp:prop-parametrised-morphism-slice" class="proposition"><strong>Proposition 3.10  </strong></span>Let <eq env="math">{\mathcal{M}}</eq> be a monoidal category and <eq env="math">{\mathcal{C}}</eq> be a cateogry enriched in <eq env="math">{\mathcal{M}}</eq>. Let <eq env="math">X</eq> and <eq env="math">Y</eq> be objects of <eq env="math">{\mathcal{C}}</eq>. Then the slice category <eq env="math">{\mathcal{M}} / [X, Y]</eq> has as its objects the parametrised morphisms <eq env="math">X \to Y</eq>, i.e. pairs of an object <eq env="math">M</eq> of <eq env="math">{\mathcal{M}}</eq> and a morphism <eq env="math">M \to [X, Y]</eq>.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:prop-parametrised-morphism-slice-indexed" class="proposition"><strong>Proposition 3.11  </strong></span>There is a functor <eq env="math">{\mathcal{M}} / [-, -] : {\mathcal{C}}^\mathrm{op}\times {\mathcal{C}} \to \mathbf{Cat}</eq> given by the composite
+<eq env="displaymath"> {\mathcal{C}}^\mathrm{op}\times {\mathcal{C}} \xrightarrow{[-, -]} {\mathcal{M}} \xrightarrow{{\mathcal{M}} / -} \mathbf{Cat} </eq></p>
+</div>
+<p>Sightly more concretely, in the case that <eq env="math">{\mathcal{M}} = \mathbf{Set}</eq>, a parametrised morphism <eq env="math">X \to Y</eq> consists of a set <eq env="math">M</eq> and a function <eq env="math">f : M \to {\mathcal{C}} (X, Y)</eq>. Given morphisms <eq env="math">s : X' \to X</eq> and <eq env="math">t : Y \to Y'</eq> of <eq env="math">{\mathcal{C}}</eq>, the functor <eq env="math">{\mathcal{M}} / [s, t] : {\mathcal{M}} / [X, Y] \to {\mathcal{M}} / [X', Y']</eq> takes the object <eq env="math">f</eq> to the parametrised morphism <eq env="math">({\mathcal{M}} / [s, t]) (f) : M \to [X', Y']</eq> taking <eq env="math">m</eq> to the composite
+<eq env="displaymath"> X' \xrightarrow{s} X \xrightarrow{f (m)} Y \xrightarrow{t} Y' </eq></p>
+<div class="definition">
+<p><span id="def:prop-parametrised-morphism-vertical-category" class="definition"><strong>Definition 3.11  </strong></span>Let <eq env="math">{\mathcal{M}}</eq> be a monoidal category and <eq env="math">{\mathcal{C}}</eq> a category enriched in <eq env="math">{\mathcal{M}}</eq>. The category <eq env="math">\overleftarrow{\mathscr P}({\mathcal{C}})_v</eq> is defined as the total category <eq env="math">\iint {\mathcal{M}} / [-, -]</eq> regarded as a two-sided fibration.</p>
+<p>Concretely, objects of <eq env="math">\overleftarrow{\mathscr P}({\mathcal{C}})_v</eq> are parametrised morphisms <eq env="math">f : M \to [X, Y]</eq>, and a morphism from <eq env="math">f</eq> to <eq env="math">g : N \to [X', Y']</eq> is a triple of morphisms <eq env="math">X \to X'</eq> and <eq env="math">Y \to Y'</eq> in <eq env="math">{\mathcal{C}}</eq> and <eq env="math">M \to N</eq> in <eq env="math">{\mathcal{M}}</eq> such that [todo diagram]</p>
+<p>The fibration <eq env="math">\overleftarrow{\mathscr P}({\mathcal{C}})_v \to {\mathcal{C}}</eq> taking <eq env="math">f : M \to [X, Y]</eq> to <eq env="math">X</eq> is called the <strong>domain fibration</strong>, and the opfibration <eq env="math">\overleftarrow{\mathscr P}({\mathcal{C}})_v \to {\mathcal{C}}</eq> taking <eq env="math">f : M \to [X, Y]</eq> to <eq env="math">Y</eq> is called the <strong>codomain opfibration</strong>.</p>
+</div>
+</div>
+<div id="parametrised-colinks" class="section level2">
+<h2><span class="header-section-number">3.6</span> Parametrised colinks</h2>
 <p>The central construction of categorical cybernetics is categories of parametrised colinks. At this stage the symmetry breaks: we always parametrise colinks, and consider morphisms between them given by non-parametrised links.</p>
 <p>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and consider the category <eq env="math">\overleftarrow{\mathscr L}({\mathcal{C}})</eq>. This category acts on itself by the tensor product of colinks. A parametrised colink <eq env="math">\binom{X'}{X} \to \binom{Y'}{Y}</eq> consists of a colink <eq env="math">\binom{X'}{X} \otimes \binom{P'}{P} \to \binom{Y'}{Y}</eq>. Unpacking, this is:</p>
 <ul>
@@ -202,6 +229,7 @@ The composition <eq env="math">fg : X \to Z</eq> is the parametrised morphism wi
 <li>A backwards pass on parameters <eq env="math">X \times P \times Y' \to P'</eq></li>
 </ul>
 
+</div>
 </div>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
 
