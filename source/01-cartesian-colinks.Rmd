@@ -327,10 +327,10 @@ Let $\cal C$ be a category with finite products. Then the forwards pass functor 
 ## The double category of colinks and links {#double-category-colinks-links}
 
 ::: {.definition #def-colink-link-commutation}
-Let $\cal C$ be a category with finite products. We say that a square of the form [todo] where $h_1$ and $h_2$ are colinks in $\cal C$ and $v_1$ and $v_2$ are links in $\cal C$ formally commutes if:
+Let $\cal C$ be a category with finite products. We say that a square of the form [diagram](https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXGJpbm9te1gnfXtYfSJdLFsyLDAsIlxcYmlub217WX17WSd9Il0sWzAsMiwiXFxiaW5vbXtaJ317Wn0iXSxbMiwyLCJcXGJpbm9te1cnfXtXfSJdLFswLDEsIlxcYmlub217aF8xJ317aF8xfSJdLFsyLDMsIlxcYmlub217aF8yJ317aF8yfSJdLFswLDIsIlxcYmlub217dl8xJ317dl8xfSIsMV0sWzEsMywiXFxiaW5vbXt2XzInfXt2XzJ9IiwxXV0=) **formally commutes**, where $\pair{h_1}{h_1'}$ and $\pair{h_2}{h_2'}$ are colinks in $\cal C$ and $\pair{v_1}{v_1'}$ and $\pair{v_2}{v_2'}$ are links in $\cal C$, if:
 
-- [todo condition 1]
-- [todo condition 2]
+- [Condition 1](https://q.uiver.app/#q=WzAsNCxbMCwwLCJYIl0sWzIsMCwiWSJdLFswLDIsIloiXSxbMiwyLCJXIl0sWzAsMSwiaF8xIl0sWzIsMywiaF8yIl0sWzAsMiwidl8xIiwxXSxbMSwzLCJ2XzIiLDFdXQ==)
+- [Condition 2](https://q.uiver.app/#q=WzAsNSxbMCwwLCJYIFxcdGltZXMgWSciXSxbNCwwLCJYIFxcdGltZXMgWCciXSxbNCwyLCJaJyJdLFsyLDIsIlogXFx0aW1lcyBXJyJdLFswLDIsIlogXFx0aW1lcyBZIFxcdGltZXMgWSciXSxbMCwxLCJcXGxlZnQ8IFxccGlfMiwgaF8xJyBcXHJpZ2h0PiJdLFsxLDIsInZfMSciXSxbMywyLCJoXzInIiwyXSxbNCwzLCJaIFxcdGltZXMgdl8yJyIsMl0sWzAsNCwiXFxsZWZ0PCB2XzEsIGhfMSBcXHJpZ2h0PiBcXHRpbWVzIFknIiwyXV0=), which can alternatively be written as an equation between string diagrams: ![](/images/double_category_colinks_link_coherence.jpg)
 :::
 
 ::: {.definition #def-double-category-colinks-links}
