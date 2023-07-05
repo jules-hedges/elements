@@ -124,6 +124,45 @@ Concretely, objects of $\para (\cal C)_v$ are parametrised morphisms $f : M \to 
 The fibration $\para (\cal C)_v \to \cal C$ taking $f : M \to [X, Y]$ to $X$ is called the **domain fibration**, and the opfibration $\para (\cal C)_v \to \cal C$ taking $f : M \to [X, Y]$ to $Y$ is called the **codomain opfibration**.
 :::
 
+## Locally graded categories
+
+::: {.definition #def-locally-graded-category}
+Let $\cal M$ be a monoidal category. A locally $\cal M$-graded category is a category $\cal C$ enriched in the category of presheaves $[\cal M^\op, \Set]$ with the monoidal structure given by Day convolution.
+:::
+
+::: {.definition}
+Let $\cal M$ be a monoidal category and $\cal C$ a locally $\cal M$-graded category. Let $X, Y$ be objects of $\cal C$. A **parametrised morphism** $f : X \to Y$ consists of an object $M$ of $\cal M$ and an element $f : \cal C (X, Y) (M)$. We call $M$ the **parameter object** of $f$.
+:::
+
+If $\cal C$ is a locally $\cal M$-graded category, then composition of morphisms in $\cal C$ defines a morphism of presheaves $\cal M^\op \to \Set$,
+\[ \circ : \cal C (X, Y) \otimes \cal C (Y, Z) \to \cal C (X, Z) \]
+where $\otimes$ is Day convolution, i.e. for every object $M$ of $\cal M$ a function
+\[ \circ_M : \int^{M_1, M_2 : \cal M} \cal M (M, M_1 \otimes M_2) \times \cal C (X, Y) (M_1) \times \cal C (Y, Z) (M_2) \to \cal C (X, Z) (M) \]
+where the left hand side is the set of equivalence classes of tuples $(M_1, M_2, \alpha : M \to M_1 \otimes M_2, f : \cal C (X, Y) (M_1), g : \cal C (Y, Z) (M_2))$.
+
+::: {.definition}
+Let $\cal M$ be a monoidal category and $\cal C$ a locally $\cal M$-graded category. Let $f : X \to Y$ and $g : Y \to Z$ be parametrised morphisms with parameter objects $M, N$. Their composition is the parametrised morphism with parameter object $M \otimes N$ and the element of $\cal C (X, Z) (M \otimes N)$ given by $\circ_{M \otimes N} (M, N, \id_{M \otimes N}, f, g)$.
+:::
+
+If $\cal C$ is a locally $\cal M$-graded category, then the identity morphisms of $\cal C$ define a morphism of presheaves
+\[ \id_X : I \to \cal C (X, X) \]
+i.e. for every object $M$ of $\cal M$ a function
+\[ (\id_X)_M : \cal M (I, M) \to \cal C (X, X) (M) \]
+
+::: {.definition}
+Let $\cal M$ be a monoidal category and $\cal C$ a locally $\cal M$-graded category. Let $X$ be an object of $\cal C$. The identity parametried morphism $X \to X$ is given by the parameter object $I$ and the element of $\cal C (X, X) (I)$ given by $(\id_X)_I (\id_I)$.
+:::
+
+::: {.definition}
+Let $\cal M$ be a monoidal category and $\cal C$ a locally $\cal M$-graded category. Let $X, Y$ be objects of $\cal C$. Then we define the category $\para (\cal C)_g (X, Y)$ to be the category of elements $\int^{M : \cal M} \cal C (X, Y) (M)$.
+:::
+
+Written out, objects of $\para (\cal C)_g (X, Y)$ are parametrised morphisms $X \to Y$, and a morphism from $(M, f) \to (N, g)$ is given by a morphism $h : M \to N$ such that $f = \cal C (X, Y) (h) (g)$.
+
+::: {.proposition}
+$\para (\cal C)_g (-, -)$ defines a functor $\cal C^\op \times \cal C \to \Cat$.
+:::
+
 ## Parametrised colinks {#parametrised-colinks}
 
 The central construction of categorical cybernetics is categories of parametrised colinks. At this stage the symmetry breaks: we always parametrise colinks, and consider morphisms between them given by non-parametrised links.
