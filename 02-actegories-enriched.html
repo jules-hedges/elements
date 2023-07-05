@@ -92,7 +92,8 @@
 <li class="chapter" data-level="3.3" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html#enriched-links-colinks"><i class="fa fa-check"></i><b>3.3</b> Enriched links and colinks</a></li>
 <li class="chapter" data-level="3.4" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html#parametrisation-actegories"><i class="fa fa-check"></i><b>3.4</b> Parametrisation for actegories</a></li>
 <li class="chapter" data-level="3.5" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html#parametrisation-enriched-categories"><i class="fa fa-check"></i><b>3.5</b> Parametrisation for enriched categories</a></li>
-<li class="chapter" data-level="3.6" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html#parametrised-colinks"><i class="fa fa-check"></i><b>3.6</b> Parametrised colinks</a></li>
+<li class="chapter" data-level="3.6" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html#locally-graded-categories"><i class="fa fa-check"></i><b>3.6</b> Locally graded categories</a></li>
+<li class="chapter" data-level="3.7" data-path="02-actegories-enriched.html"><a href="02-actegories-enriched.html#parametrised-colinks"><i class="fa fa-check"></i><b>3.7</b> Parametrised colinks</a></li>
 </ul></li>
 </ul>
 
@@ -218,8 +219,39 @@ The composition <eq env="math">fg : X \to Z</eq> is the parametrised morphism wi
 <p>The fibration <eq env="math">\overleftarrow{\mathscr P}({\mathcal{C}})_v \to {\mathcal{C}}</eq> taking <eq env="math">f : M \to [X, Y]</eq> to <eq env="math">X</eq> is called the <strong>domain fibration</strong>, and the opfibration <eq env="math">\overleftarrow{\mathscr P}({\mathcal{C}})_v \to {\mathcal{C}}</eq> taking <eq env="math">f : M \to [X, Y]</eq> to <eq env="math">Y</eq> is called the <strong>codomain opfibration</strong>.</p>
 </div>
 </div>
+<div id="locally-graded-categories" class="section level2">
+<h2><span class="header-section-number">3.6</span> Locally graded categories</h2>
+<div class="definition">
+<p><span id="def:def-locally-graded-category" class="definition"><strong>Definition 3.12  </strong></span>Let <eq env="math">{\mathcal{M}}</eq> be a monoidal category. A locally <eq env="math">{\mathcal{M}}</eq>-graded category is a category <eq env="math">{\mathcal{C}}</eq> enriched in the category of presheaves <eq env="math">[{\mathcal{M}}^\mathrm{op}, \mathbf{Set}]</eq> with the monoidal structure given by Day convolution.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-11" class="definition"><strong>Definition 3.13  </strong></span>Let <eq env="math">{\mathcal{M}}</eq> be a monoidal category and <eq env="math">{\mathcal{C}}</eq> a locally <eq env="math">{\mathcal{M}}</eq>-graded category. Let <eq env="math">X, Y</eq> be objects of <eq env="math">{\mathcal{C}}</eq>. A <strong>parametrised morphism</strong> <eq env="math">f : X \to Y</eq> consists of an object <eq env="math">M</eq> of <eq env="math">{\mathcal{M}}</eq> and an element <eq env="math">f : {\mathcal{C}} (X, Y) (M)</eq>. We call <eq env="math">M</eq> the <strong>parameter object</strong> of <eq env="math">f</eq>.</p>
+</div>
+<p>If <eq env="math">{\mathcal{C}}</eq> is a locally <eq env="math">{\mathcal{M}}</eq>-graded category, then composition of morphisms in <eq env="math">{\mathcal{C}}</eq> defines a morphism of presheaves <eq env="math">{\mathcal{M}}^\mathrm{op}\to \mathbf{Set}</eq>,
+<eq env="displaymath"> \circ : {\mathcal{C}} (X, Y) \otimes {\mathcal{C}} (Y, Z) \to {\mathcal{C}} (X, Z) </eq>
+where <eq env="math">\otimes</eq> is Day convolution, i.e. for every object <eq env="math">M</eq> of <eq env="math">{\mathcal{M}}</eq> a function
+<eq env="displaymath"> \circ_M : \int^{M_1, M_2 : {\mathcal{M}}} {\mathcal{M}} (M, M_1 \otimes M_2) \times {\mathcal{C}} (X, Y) (M_1) \times {\mathcal{C}} (Y, Z) (M_2) \to {\mathcal{C}} (X, Z) (M) </eq>
+where the left hand side is the set of equivalence classes of tuples <eq env="math">(M_1, M_2, \alpha : M \to M_1 \otimes M_2, f : {\mathcal{C}} (X, Y) (M_1), g : {\mathcal{C}} (Y, Z) (M_2))</eq>.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-12" class="definition"><strong>Definition 3.14  </strong></span>Let <eq env="math">{\mathcal{M}}</eq> be a monoidal category and <eq env="math">{\mathcal{C}}</eq> a locally <eq env="math">{\mathcal{M}}</eq>-graded category. Let <eq env="math">f : X \to Y</eq> and <eq env="math">g : Y \to Z</eq> be parametrised morphisms with parameter objects <eq env="math">M, N</eq>. Their composition is the parametrised morphism with parameter object <eq env="math">M \otimes N</eq> and the element of <eq env="math">{\mathcal{C}} (X, Z) (M \otimes N)</eq> given by <eq env="math">\circ_{M \otimes N} (M, N, 1_{M \otimes N}, f, g)</eq>.</p>
+</div>
+<p>If <eq env="math">{\mathcal{C}}</eq> is a locally <eq env="math">{\mathcal{M}}</eq>-graded category, then the identity morphisms of <eq env="math">{\mathcal{C}}</eq> define a morphism of presheaves
+<eq env="displaymath"> 1_X : I \to {\mathcal{C}} (X, X) </eq>
+i.e. for every object <eq env="math">M</eq> of <eq env="math">{\mathcal{M}}</eq> a function
+<eq env="displaymath"> (1_X)_M : {\mathcal{M}} (I, M) \to {\mathcal{C}} (X, X) (M) </eq></p>
+<div class="definition">
+<p><span id="def:unlabeled-div-13" class="definition"><strong>Definition 3.15  </strong></span>Let <eq env="math">{\mathcal{M}}</eq> be a monoidal category and <eq env="math">{\mathcal{C}}</eq> a locally <eq env="math">{\mathcal{M}}</eq>-graded category. Let <eq env="math">X</eq> be an object of <eq env="math">{\mathcal{C}}</eq>. The identity parametried morphism <eq env="math">X \to X</eq> is given by the parameter object <eq env="math">I</eq> and the element of <eq env="math">{\mathcal{C}} (X, X) (I)</eq> given by <eq env="math">(1_X)_I (1_I)</eq>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-14" class="definition"><strong>Definition 3.16  </strong></span>Let <eq env="math">{\mathcal{M}}</eq> be a monoidal category and <eq env="math">{\mathcal{C}}</eq> a locally <eq env="math">{\mathcal{M}}</eq>-graded category. Let <eq env="math">X, Y</eq> be objects of <eq env="math">{\mathcal{C}}</eq>. Then we define the category <eq env="math">\overleftarrow{\mathscr P}({\mathcal{C}})_g (X, Y)</eq> to be the category of elements <eq env="math">\int^{M : {\mathcal{M}}} {\mathcal{C}} (X, Y) (M)</eq>.</p>
+</div>
+<p>Written out, objects of <eq env="math">\overleftarrow{\mathscr P}({\mathcal{C}})_g (X, Y)</eq> are parametrised morphisms <eq env="math">X \to Y</eq>, and a morphism from <eq env="math">(M, f) \to (N, g)</eq> is given by a morphism <eq env="math">h : M \to N</eq> such that <eq env="math">f = {\mathcal{C}} (X, Y) (h) (g)</eq>.</p>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-15" class="proposition"><strong>Proposition 3.12  </strong></span><eq env="math">\overleftarrow{\mathscr P}({\mathcal{C}})_g (-, -)</eq> defines a functor <eq env="math">{\mathcal{C}}^\mathrm{op}\times {\mathcal{C}} \to \mathbf{Cat}</eq>.</p>
+</div>
+</div>
 <div id="parametrised-colinks" class="section level2">
-<h2><span class="header-section-number">3.6</span> Parametrised colinks</h2>
+<h2><span class="header-section-number">3.7</span> Parametrised colinks</h2>
 <p>The central construction of categorical cybernetics is categories of parametrised colinks. At this stage the symmetry breaks: we always parametrise colinks, and consider morphisms between them given by non-parametrised links.</p>
 <p>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products, and consider the category <eq env="math">\overleftarrow{\mathscr L}({\mathcal{C}})</eq>. This category acts on itself by the tensor product of colinks. A parametrised colink <eq env="math">\binom{X'}{X} \to \binom{Y'}{Y}</eq> consists of a colink <eq env="math">\binom{X'}{X} \otimes \binom{P'}{P} \to \binom{Y'}{Y}</eq>. Unpacking, this is:</p>
 <ul>

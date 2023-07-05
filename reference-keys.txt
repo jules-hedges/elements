@@ -74,6 +74,12 @@ prp:prop-parametrised-morphism-vertical-category-fibration
 prp:prop-parametrised-morphism-slice
 prp:prop-parametrised-morphism-slice-indexed
 def:prop-parametrised-morphism-vertical-category
+def:def-locally-graded-category
+def:unlabeled-div-11
+def:unlabeled-div-12
+def:unlabeled-div-13
+def:unlabeled-div-14
+prp:unlabeled-div-15
 intro
 cartesian-links-colinks
 category-cartesian-links
@@ -90,4 +96,5 @@ enriched-categories
 enriched-links-colinks
 parametrisation-actegories
 parametrisation-enriched-categories
+locally-graded-categories
 parametrised-colinks
