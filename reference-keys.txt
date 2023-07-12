@@ -50,6 +50,7 @@ prp:prop-reader-comonad-kleisli-products
 prp:prop-reader-comonad-indexed
 prp:prop-cartesian-link-functor-fibration
 prp:prop-cartesian-colink-forwards-pass-fibration
+def:unlabeled-div-8
 def:def-colink-link-commutation
 def:def-double-category-colinks-links
 def:def-enriched-link
@@ -63,8 +64,8 @@ def:def-parametrised-morphism
 def:def-parametrised-morphism-composition
 def:def-parametrised-morphism-identity
 def:def-parametrised-morphism-globular-2-cell
-prp:unlabeled-div-9
-def:unlabeled-div-10
+prp:unlabeled-div-10
+def:unlabeled-div-11
 prp:prop-parametrised-morphism-source-target-functors
 prp:prop-parametrised-morphism-composition-associative
 prp:prop-parametrised-morphism-composition-unital
@@ -75,11 +76,11 @@ prp:prop-parametrised-morphism-slice
 prp:prop-parametrised-morphism-slice-indexed
 def:prop-parametrised-morphism-vertical-category
 def:def-locally-graded-category
-def:unlabeled-div-11
 def:unlabeled-div-12
 def:unlabeled-div-13
 def:unlabeled-div-14
-prp:unlabeled-div-15
+def:unlabeled-div-15
+prp:unlabeled-div-16
 intro
 cartesian-links-colinks
 category-cartesian-links

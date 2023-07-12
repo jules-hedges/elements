@@ -401,14 +401,28 @@
 <div id="double-category-colinks-links" class="section level2">
 <h2><span class="header-section-number">2.7</span> The double category of colinks and links</h2>
 <div class="definition">
-<p><span id="def:def-colink-link-commutation" class="definition"><strong>Definition 2.13  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. We say that a square of the form <a href="https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXGJpbm9te1gnfXtYfSJdLFsyLDAsIlxcYmlub217WX17WSd9Il0sWzAsMiwiXFxiaW5vbXtaJ317Wn0iXSxbMiwyLCJcXGJpbm9te1cnfXtXfSJdLFswLDEsIlxcYmlub217aF8xJ317aF8xfSJdLFsyLDMsIlxcYmlub217aF8yJ317aF8yfSJdLFswLDIsIlxcYmlub217dl8xJ317dl8xfSIsMV0sWzEsMywiXFxiaW5vbXt2XzInfXt2XzJ9IiwxXV0=">diagram</a> <strong>formally commutes</strong>, where <eq env="math">\binom{h_1'}{h_1}</eq> and <eq env="math">\binom{h_2'}{h_2}</eq> are colinks in <eq env="math">{\mathcal{C}}</eq> and <eq env="math">\binom{v_1'}{v_1}</eq> and <eq env="math">\binom{v_2'}{v_2}</eq> are links in <eq env="math">{\mathcal{C}}</eq>, if:</p>
+<p><span id="def:unlabeled-div-8" class="definition"><strong>Definition 2.13  </strong></span>Let <eq env="math">F : {\mathcal{C}}^\mathrm{op}\to \mathbf{Cat}</eq> be an indexed category. Let <eq env="math">\binom{v_1'}{v_1} : \binom{X'}{X} \to \binom{Z'}{Z}</eq> and <eq env="math">\binom{v_2'}{v_2} : \binom{Y'}{Y} \to \binom{W'}{W}</eq> be morphisms of <eq env="math">\int_{X : {\mathcal{C}}} F (X)</eq>, and let <eq env="math">\binom{h_1'}{h_1} : \binom{X'}{X} \to \binom{Y'}{Y}</eq> and <eq env="math">\binom{h_2'}{h_2} : \binom{Z'}{Z} \to \binom{W'}{W}</eq> be morhisms of <eq env="math">\int_{X : {\mathcal{C}}} F (X)^\mathrm{op}</eq>. Unpacking, this means</p>
+<ul>
+<li><eq env="math">v_1 : X \to Z</eq> in <eq env="math">{\mathcal{C}}</eq> and <eq env="math">v_1' : X' \to F (v_1) (Z')</eq> in <eq env="math">F (X)</eq></li>
+<li><eq env="math">v_2 : Y \to W</eq> in <eq env="math">{\mathcal{C}}</eq> and <eq env="math">v_2' : Y' \to F (v_2) (W')</eq> in <eq env="math">F (Y)</eq></li>
+<li><eq env="math">h_1 : X \to Y</eq> in <eq env="math">{\mathcal{C}}</eq> and <eq env="math">h_1' : F (h_1) (Y') \to X'</eq> in <eq env="math">F (X)</eq></li>
+<li><eq env="math">h_2 : Z \to W</eq> in <eq env="math">{\mathcal{C}}</eq> and <eq env="math">h_2' : F (h_2) (W') \to Z'</eq> in <eq env="math">F(Z)</eq></li>
+</ul>
+<p>We say that the square <a href="https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXGJpbm9te1gnfXtYfSJdLFsyLDAsIlxcYmlub217WX17WSd9Il0sWzAsMiwiXFxiaW5vbXtaJ317Wn0iXSxbMiwyLCJcXGJpbm9te1cnfXtXfSJdLFswLDEsIlxcYmlub217aF8xJ317aF8xfSJdLFsyLDMsIlxcYmlub217aF8yJ317aF8yfSJdLFswLDIsIlxcYmlub217dl8xJ317dl8xfSIsMV0sWzEsMywiXFxiaW5vbXt2XzInfXt2XzJ9IiwxXV0=">diagram</a> <strong>formally commutes</strong> if</p>
+<ul>
+<li><a href="https://q.uiver.app/#q=WzAsNCxbMCwwLCJYIl0sWzIsMCwiWSJdLFswLDIsIloiXSxbMiwyLCJXIl0sWzAsMSwiaF8xIl0sWzIsMywiaF8yIl0sWzAsMiwidl8xIiwxXSxbMSwzLCJ2XzIiLDFdXQ==">Condition 1</a></li>
+<li><a href="https://q.uiver.app/#q=WzAsNCxbMiwwLCJGIChoXzEpIChZJykiXSxbMCwwLCJYJyJdLFswLDIsIkYgKHZfMSkgKFonKSJdLFsyLDIsIkYgKGhfMSB2XzIpIChXJykgPSBGICh2XzEgaF8yKSAoVycpIl0sWzAsMSwiaF8xJyJdLFsxLDIsInZfMSciXSxbMCwzLCJGIChoXzEpICh2XzInKSIsMl0sWzMsMiwiRiAodl8xKSAoaF8yJykiLDJdXQ==">Condition 2</a></li>
+</ul>
+</div>
+<div class="definition">
+<p><span id="def:def-colink-link-commutation" class="definition"><strong>Definition 2.14  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. We say that a square of the form <a href="https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXGJpbm9te1gnfXtYfSJdLFsyLDAsIlxcYmlub217WX17WSd9Il0sWzAsMiwiXFxiaW5vbXtaJ317Wn0iXSxbMiwyLCJcXGJpbm9te1cnfXtXfSJdLFswLDEsIlxcYmlub217aF8xJ317aF8xfSJdLFsyLDMsIlxcYmlub217aF8yJ317aF8yfSJdLFswLDIsIlxcYmlub217dl8xJ317dl8xfSIsMV0sWzEsMywiXFxiaW5vbXt2XzInfXt2XzJ9IiwxXV0=">diagram</a> <strong>formally commutes</strong>, where <eq env="math">\binom{h_1'}{h_1}</eq> and <eq env="math">\binom{h_2'}{h_2}</eq> are colinks in <eq env="math">{\mathcal{C}}</eq> and <eq env="math">\binom{v_1'}{v_1}</eq> and <eq env="math">\binom{v_2'}{v_2}</eq> are links in <eq env="math">{\mathcal{C}}</eq>, if:</p>
 <ul>
 <li><a href="https://q.uiver.app/#q=WzAsNCxbMCwwLCJYIl0sWzIsMCwiWSJdLFswLDIsIloiXSxbMiwyLCJXIl0sWzAsMSwiaF8xIl0sWzIsMywiaF8yIl0sWzAsMiwidl8xIiwxXSxbMSwzLCJ2XzIiLDFdXQ==">Condition 1</a></li>
 <li><a href="https://q.uiver.app/#q=WzAsNSxbMCwwLCJYIFxcdGltZXMgWSciXSxbNCwwLCJYIFxcdGltZXMgWCciXSxbNCwyLCJaJyJdLFsyLDIsIlogXFx0aW1lcyBXJyJdLFswLDIsIlogXFx0aW1lcyBZIFxcdGltZXMgWSciXSxbMCwxLCJcXGxlZnQ8IFxccGlfMiwgaF8xJyBcXHJpZ2h0PiJdLFsxLDIsInZfMSciXSxbMywyLCJoXzInIiwyXSxbNCwzLCJaIFxcdGltZXMgdl8yJyIsMl0sWzAsNCwiXFxsZWZ0PCB2XzEsIGhfMSBcXHJpZ2h0PiBcXHRpbWVzIFknIiwyXV0=">Condition 2</a>, which can alternatively be written as an equation between string diagrams: <img src="/images/double_category_colinks_link_coherence.jpg" /></li>
 </ul>
 </div>
 <div class="definition">
-<p><span id="def:def-double-category-colinks-links" class="definition"><strong>Definition 2.14  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then <eq env="math">{\mathcal{L}} ({\mathcal{C}})</eq> is the double category where:</p>
+<p><span id="def:def-double-category-colinks-links" class="definition"><strong>Definition 2.15  </strong></span>Let <eq env="math">{\mathcal{C}}</eq> be a category with finite products. Then <eq env="math">{\mathcal{L}} ({\mathcal{C}})</eq> is the double category where:</p>
 <ul>
 <li>Objects are pairs of objects of <eq env="math">{\mathcal{C}}</eq></li>
 <li>Loose 1-cells are cartesian colinks in <eq env="math">{\mathcal{C}}</eq></li>
